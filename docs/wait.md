@@ -11,11 +11,19 @@ A javascript library of async functions
 
 ---
 
-<a name="Installation"></a>
+<a name="wait"></a>
 
-## Installation
-With npm```npm install async-agent```## CompatibilityRequires:- Babel >= 7.2## Docs- [defer](docs/defer.md)- [delay](docs/delay.md)- [clear](docs/clear.md)- [wait](docs/wait.md)
+## wait([duration]) ⇒ <code>Promise</code>
+Delays the resolving of a new Promise for a given amount of time. Provides the same functionality as defer and delay, but with promises.
 
+**Kind**: global function  
+
+| Param | Type | Default |
+| --- | --- | --- |
+| [duration] | <code>Number</code> | <code>0</code> | 
+
+**Example**  
+``` javascriptimport { wait } from 'async-agent';wait(1000)    .then(() => {        console.log('2');    });console.log('1');// => 1// (after 1000ms) => 2```
 
 ## License
 

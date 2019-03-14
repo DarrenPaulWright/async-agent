@@ -11,11 +11,20 @@ A javascript library of async functions
 
 ---
 
-<a name="Installation"></a>
+<a name="defer"></a>
 
-## Installation
-With npm```npm install async-agent```## CompatibilityRequires:- Babel >= 7.2## Docs- [defer](docs/defer.md)- [delay](docs/delay.md)- [clear](docs/clear.md)- [wait](docs/wait.md)
+## defer(callback) ⇒ <code>Number</code>
+Defers the calling of a callback until the current stack is complete.
 
+**Kind**: global function  
+**Returns**: <code>Number</code> - An id that can be used to clear the callback before it gets called.  
+
+| Param | Type |
+| --- | --- |
+| callback | <code>function</code> | 
+
+**Example**  
+``` javascriptimport { defer } from 'async-agent';defer(() => {    console.log('2');});console.log('1');// => 1// => 2```
 
 ## License
 

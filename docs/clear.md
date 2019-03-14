@@ -11,11 +11,19 @@ A javascript library of async functions
 
 ---
 
-<a name="Installation"></a>
+<a name="clear"></a>
 
-## Installation
-With npm```npm install async-agent```## CompatibilityRequires:- Babel >= 7.2## Docs- [defer](docs/defer.md)- [delay](docs/delay.md)- [clear](docs/clear.md)- [wait](docs/wait.md)
+## clear(id)
+Clears a defer or delay callback.
 
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>Number</code> | An id returned from defer or delay |
+
+**Example**  
+``` javascriptimport { delay, clear } from 'async-agent';const id = delay(() => {    console.log('2');}, 1000);console.log('1');clear(id);// => 1```
 
 ## License
 
