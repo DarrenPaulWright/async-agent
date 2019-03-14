@@ -14,7 +14,8 @@
 		"docs-delay": "jsdoc2md src/delay.js > docs/delay.md --template docs.hbs",
 		"docs-clear": "jsdoc2md src/clear.js > docs/clear.md --template docs.hbs",
 		"docs-wait": "jsdoc2md src/wait.js > docs/wait.md --template docs.hbs",
-		"docs": "npm run docs-readme && npm run docs-defer && npm run docs-delay && npm run docs-clear && npm run docs-wait"
+		"docs-forRange": "jsdoc2md src/forRange.js > docs/forRange.md --template docs.hbs",
+		"docs": "npm run docs-readme && npm run docs-defer && npm run docs-delay && npm run docs-clear && npm run docs-wait && npm run docs-forRange"
 	},
 	"repository": {
 		"type": "git",
@@ -25,7 +26,8 @@
 		"delay",
 		"clear",
 		"wait",
-		"promise"
+		"promise",
+		"forRange"
 	],
 	"author": "Darren Paul Wright <Darren@DarrenPaulWright.com>",
 	"license": "MIT",

@@ -14,7 +14,7 @@ A javascript library of async functions
 <a name="Installation"></a>
 
 ## Installation
-With npm```npm install async-agent```## CompatibilityRequires:- Babel >= 7.2## Docs- [defer](docs/defer.md)- [delay](docs/delay.md)- [clear](docs/clear.md)- [wait](docs/wait.md)
+With npm```npm install async-agent```## CompatibilityRequires:- Babel >= 7.2## Docs- [defer](docs/defer.md)- [delay](docs/delay.md)- [clear](docs/clear.md)- [wait](docs/wait.md)- [forRange](docs/forRange.md)
 
 
 ## License

@@ -15,6 +15,7 @@
  * - [delay](docs/delay.md)
  * - [clear](docs/clear.md)
  * - [wait](docs/wait.md)
+ * - [forRange](docs/forRange.md)
  *
  * @name Installation
  */
@@ -22,3 +23,4 @@ export { default as defer } from './defer';
 export { default as delay } from './delay';
 export { default as clear } from './clear';
 export { default as wait } from './wait';
+export { default as forRange } from './forRange';
