@@ -19,7 +19,7 @@
  * @function delay
  *
  * @arg {Function} callback
- * @arg {Number} duration
+ * @arg {Number} [duration=0]
  *
  * @returns {Number} An id that can be used to clear the callback before it gets called.
  */
