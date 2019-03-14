@@ -13,16 +13,16 @@ A javascript library of async functions
 
 <a name="delay"></a>
 
-## delay(callback, duration) ⇒ <code>Number</code>
+## delay(callback, [duration]) ⇒ <code>Number</code>
 Delays the calling of a callback for a given amount of time.
 
 **Kind**: global function  
 **Returns**: <code>Number</code> - An id that can be used to clear the callback before it gets called.  
 
-| Param | Type |
-| --- | --- |
-| callback | <code>function</code> | 
-| duration | <code>Number</code> | 
+| Param | Type | Default |
+| --- | --- | --- |
+| callback | <code>function</code> |  | 
+| [duration] | <code>Number</code> | <code>0</code> | 
 
 **Example**  
 ``` javascriptimport { delay } from 'async-agent';delay(() => {    console.log('2');}, 1000);console.log('1');// => 1// (after 1000ms) => 2```
