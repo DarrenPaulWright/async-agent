@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [0.3.0] - 2019-3-15
+### Added
+- [debounce](docs/debounce.md)
+- [throttle](docs/throttle.md)
+
 ## [0.2.0] - 2019-3-13
 ### Added
 - [forRange](docs/forRange.md)
@@ -15,4 +20,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [clear](docs/clear.md)
 - [wait](docs/wait.md)
 
+[0.3.0]: https://github.com/DarrenPaulWright/async-agent/compare/v0.2.0...0.3.0
 [0.2.0]: https://github.com/DarrenPaulWright/async-agent/compare/v0.1.0...0.2.0
