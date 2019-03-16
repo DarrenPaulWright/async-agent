@@ -234,21 +234,22 @@ describe('debounce', () => {
 		debounced();
 		debounced();
 
-		assert.equal(testVar, 0);
+		assert.equal(testVar, 0, 'before wait');
 
 		const start = Date.now();
 
 		return wait()
 			.then(() => {
-				assert.equal(testVar, 0);
+				console.log('Date.now() - start: ', Date.now() - start);
+				assert.equal(testVar, 0, 'after first wait');
 				return wait(11 - (Date.now() - start));
 			})
 			.then(() => {
-				assert.equal(testVar, 1);
+				assert.equal(testVar, 1, 'after second wait');
 				return wait(9);
 			})
 			.then(() => {
-				assert.equal(testVar, 1);
+				assert.equal(testVar, 1, 'after third wait');
 			});
 	});
 });
