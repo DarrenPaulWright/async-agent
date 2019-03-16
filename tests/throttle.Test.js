@@ -129,12 +129,12 @@ describe('throttle', () => {
 
 		assert.equal(totalCalls, 1);
 
-		return wait(3)
+		return wait()
 			.then(() => {
 				throttled();
 				throttled();
 				assert.equal(totalCalls, 1);
-				return wait(3);
+				return wait();
 			})
 			.then(() => {
 				assert.equal(totalCalls, 1);
@@ -161,12 +161,12 @@ describe('throttle', () => {
 
 		assert.equal(totalCalls, 1);
 
-		return wait(2)
+		return wait()
 			.then(() => {
 				throttled();
 				throttled();
 				assert.equal(totalCalls, 1);
-				return wait(2);
+				return wait();
 			})
 			.then(() => {
 				assert.equal(totalCalls, 1);

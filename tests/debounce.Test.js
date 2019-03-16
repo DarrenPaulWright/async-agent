@@ -203,12 +203,12 @@ describe('debounce', () => {
 
 		assert.equal(testVar, 0);
 
-		return wait(5)
+		return wait(3)
 			.then(() => {
 				debounced();
 				debounced();
 				assert.equal(testVar, 0);
-				return wait(7);
+				return wait(3);
 			})
 			.then(() => {
 				debounced();
