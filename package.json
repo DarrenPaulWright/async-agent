@@ -1,6 +1,6 @@
 {
 	"name": "async-agent",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "A javascript library of async functions",
 	"main": "src/index.js",
 	"scripts": {
@@ -15,7 +15,9 @@
 		"docs-clear": "jsdoc2md src/clear.js > docs/clear.md --template docs.hbs",
 		"docs-wait": "jsdoc2md src/wait.js > docs/wait.md --template docs.hbs",
 		"docs-forRange": "jsdoc2md src/forRange.js > docs/forRange.md --template docs.hbs",
-		"docs": "npm run docs-readme && npm run docs-defer && npm run docs-delay && npm run docs-clear && npm run docs-wait && npm run docs-forRange"
+		"docs-debounce": "jsdoc2md src/debounce.js > docs/debounce.md --template docs.hbs",
+		"docs-throttle": "jsdoc2md src/throttle.js > docs/throttle.md --template docs.hbs",
+		"docs": "npm run docs-readme && npm run docs-defer && npm run docs-delay && npm run docs-clear && npm run docs-wait && npm run docs-forRange && npm run docs-debounce && npm run docs-throttle"
 	},
 	"repository": {
 		"type": "git",
@@ -27,7 +29,9 @@
 		"clear",
 		"wait",
 		"promise",
-		"forRange"
+		"forRange",
+		"debounce",
+		"throttle"
 	],
 	"author": "Darren Paul Wright <Darren@DarrenPaulWright.com>",
 	"license": "MIT",
