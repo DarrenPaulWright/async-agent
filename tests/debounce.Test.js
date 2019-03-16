@@ -236,10 +236,12 @@ describe('debounce', () => {
 
 		assert.equal(testVar, 0);
 
-		return wait(5)
+		const start = Date.now();
+
+		return wait()
 			.then(() => {
 				assert.equal(testVar, 0);
-				return wait(7);
+				return wait(11 - (Date.now() - start));
 			})
 			.then(() => {
 				assert.equal(testVar, 1);
