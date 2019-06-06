@@ -40,7 +40,7 @@ describe('delay', () => {
 	it('should call the callback after the allotted time', (done) => {
 		const now = performance.now();
 		delay(() => {
-			assert.isAbove(performance.now() - now, 10);
+			assert.isAbove(performance.now() - now, 9);
 			done();
 		}, 10);
 	});

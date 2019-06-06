@@ -240,7 +240,6 @@ describe('debounce', () => {
 
 		return wait()
 			.then(() => {
-				console.log('Date.now() - start: ', Date.now() - start);
 				assert.equal(testVar, 0, 'after first wait');
 				return wait(11 - (Date.now() - start));
 			})

@@ -15,7 +15,7 @@ describe('wait', () => {
 	it('should call the callback after the allotted time', () => {
 		const now = performance.now();
 		return wait(10).then(() => {
-			assert.isAbove(performance.now() - now, 10);
+			assert.isAbove(performance.now() - now, 9);
 		});
 	});
 });
