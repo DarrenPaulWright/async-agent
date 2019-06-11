@@ -1,16 +1,16 @@
 /**
- * With npm
+ * @name Installation
+ * @summary
+ *
  * ```
  * npm install async-agent
  * ```
- *
- * ## Compatibility
- *
- * Requires:
- * - Babel >= 7.2
- *
- * ## Docs
- *
+ * _Requires Babel 7.2+_
+ */
+
+/**
+ * @name Docs
+ * @summary
  * - [defer](docs/defer.md)
  * - [delay](docs/delay.md)
  * - [clear](docs/clear.md)
@@ -18,8 +18,6 @@
  * - [forRange](docs/forRange.md)
  * - [debounce](docs/debounce.md)
  * - [throttle](docs/throttle.md)
- *
- * @name Installation
  */
 export { default as defer } from './defer';
 export { default as delay } from './delay';

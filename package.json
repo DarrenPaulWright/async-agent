@@ -9,16 +9,53 @@
 		"patch": "npm version patch -m \"Increment patch version to %s\" && npm publish",
 		"minor": "npm version minor -m \"Increment minor version to %s\" && npm publish",
 		"major": "npm version major -m \"Increment major version to %s\" && npm publish",
-		"docs-readme": "jsdoc2md src/index.js > README.md --template docs.hbs --partial scope.hbs",
-		"docs-defer": "jsdoc2md src/defer.js > docs/defer.md --template docs.hbs",
-		"docs-delay": "jsdoc2md src/delay.js > docs/delay.md --template docs.hbs",
-		"docs-clear": "jsdoc2md src/clear.js > docs/clear.md --template docs.hbs",
-		"docs-wait": "jsdoc2md src/wait.js > docs/wait.md --template docs.hbs",
-		"docs-forRange": "jsdoc2md src/forRange.js > docs/forRange.md --template docs.hbs",
-		"docs-debounce": "jsdoc2md src/debounce.js > docs/debounce.md --template docs.hbs",
-		"docs-throttle": "jsdoc2md src/throttle.js > docs/throttle.md --template docs.hbs",
+		"docs-readme": "jsdoc2md src/index.js > README.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-defer": "jsdoc2md src/defer.js > docs/defer.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-delay": "jsdoc2md src/delay.js > docs/delay.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-clear": "jsdoc2md src/clear.js > docs/clear.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-wait": "jsdoc2md src/wait.js > docs/wait.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-forRange": "jsdoc2md src/forRange.js > docs/forRange.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-debounce": "jsdoc2md src/debounce.js > docs/debounce.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-throttle": "jsdoc2md src/throttle.js > docs/throttle.md -t docs/docs.hbs --plugin dmd-readable -d 3",
 		"docs": "npm run docs-readme && npm run docs-defer && npm run docs-delay && npm run docs-clear && npm run docs-wait && npm run docs-forRange && npm run docs-debounce && npm run docs-throttle"
 	},
+	"badges": [
+		{
+			"name": "npm",
+			"image": "https://img.shields.io/npm/v/async-agent.svg",
+			"url": "https://npmjs.com/package/async-agent"
+		},
+		{
+			"name": "build",
+			"image": "https://travis-ci.org/DarrenPaulWright/async-agent.svg?branch=master",
+			"url": "https://travis-ci.org/DarrenPaulWright/async-agent"
+		},
+		{
+			"name": "coverage",
+			"image": "https://coveralls.io/repos/github/DarrenPaulWright/async-agent/badge.svg?branch=master",
+			"url": "https://coveralls.io/github/DarrenPaulWright/async-agent?branch=master"
+		},
+		{
+			"name": "deps",
+			"image": "https://david-dm.org/darrenpaulwright/async-agent.svg",
+			"url": "https://david-dm.org/darrenpaulwright/async-agent"
+		},
+		{
+			"name": "size",
+			"image": "https://packagephobia.now.sh/badge?p=async-agent",
+			"url": "https://packagephobia.now.sh/result?p=async-agent"
+		},
+		{
+			"name": "vulnerabilities",
+			"image": "https://snyk.io/test/github/DarrenPaulWright/async-agent/badge.svg?targetFile=package.json",
+			"url": "https://snyk.io/test/github/DarrenPaulWright/async-agent?targetFile=package.json"
+		},
+		{
+			"name": "license",
+			"image": "https://img.shields.io/github/license/DarrenPaulWright/async-agent.svg",
+			"url": "https://npmjs.com/package/async-agent/LICENSE.md"
+		}
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/DarrenPaulWright/async-agent.git"
@@ -46,22 +83,23 @@
 		"babel-loader": "^8.0.6",
 		"babel-plugin-istanbul": "^5.1.4",
 		"chai": "^4.2.0",
+		"dmd-readable": "^0.3.2",
 		"eslint": "^5.16.0",
 		"eslint-loader": "^2.1.2",
 		"eslint-plugin-babel": "^5.3.0",
 		"jsdoc-to-markdown": "^5.0.0",
 		"karma": "^4.1.0",
-		"karma-brief-reporter": "0.1.1",
+		"karma-brief-reporter": "0.2.0",
 		"karma-chrome-launcher": "^2.2.0",
 		"karma-coverage": "^1.1.2",
 		"karma-coveralls": "^2.1.0",
 		"karma-firefox-launcher": "^1.1.0",
 		"karma-mocha": "^1.3.0",
-		"karma-webpack": "^3.0.5",
+		"karma-webpack": "^4.0.2",
 		"mocha": "^6.1.4",
 		"test-runner-config": "^0.5.0",
 		"wallaby-webpack": "^3.9.15",
 		"webpack": "^4.33.0",
-		"webpack-cli": "^3.3.2"
+		"webpack-cli": "^3.3.4"
 	}
 }
