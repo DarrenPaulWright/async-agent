@@ -14,27 +14,15 @@
 <br><a name="wait"></a>
 
 ### wait([duration]) ⇒ <code>Promise</code>
-> Delays the resolving of a new Promise for a given amount of time. Provides the same functionality as defer and delay, but with promises.
+> Delays the resolving of a new Promise for a given amount of time. Provides the same functionality as defer and delay, but with promises. Also serves as a wrapper for a Promise if a callback is provided.
 
 
 | Param | Type | Default |
 | --- | --- | --- |
-| [duration] | <code>Number</code> | <code>0</code> | 
+| [duration] | <code>Number</code>, <code>function</code> | <code>0</code> | 
 
 **Example**  
-``` javascript
-import { wait } from 'async-agent';
-
-wait(1000)
-    .then(() => {
-        console.log('2');
-    });
-
-console.log('1');
-
-// => 1
-// (after 1000ms) => 2
-```
+``` javascriptimport { wait } from 'async-agent';wait(1000)    .then(() => {        console.log('2');    });console.log('1');// => 1// (after 1000ms) => 2```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

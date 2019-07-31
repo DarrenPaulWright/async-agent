@@ -1,3 +1,4 @@
+import wait from './wait';
 
 /**
  * Calls an async callback for a range of numbers.
@@ -44,7 +45,7 @@
  *
  * @returns {Promise} The promise is resolved after every callback is resolved or one is rejected.
  */
-export default (first, last, callback) => new Promise((resolve) => {
+export default (first, last, callback) => wait((resolve) => {
 	const isRight = first > last;
 
 	const loop = (index) => {

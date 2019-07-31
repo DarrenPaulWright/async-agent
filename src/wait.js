@@ -1,7 +1,7 @@
 import delay from './delay';
 
 /**
- * Delays the resolving of a new Promise for a given amount of time. Provides the same functionality as defer and delay, but with promises.
+ * Delays the resolving of a new Promise for a given amount of time. Provides the same functionality as defer and delay, but with promises. Also serves as a wrapper for a Promise if a callback is provided.
  *
  * @example
  * ``` javascript
@@ -20,15 +20,18 @@ import delay from './delay';
  *
  * @function wait
  *
- * @arg {Number} [duration=0]
+ * @arg {Number|function} [duration=0]
  *
  * @returns {Promise}
  */
-export default (duration = 0) => new Promise((resolve) => {
-		if (!duration) {
-			resolve();
-		}
-		else {
-			delay(resolve, duration);
-		}
-	});
+export default (duration = 0) => new Promise((resolve, reject) => {
+	if (typeof duration === 'function') {
+		duration(resolve, reject);
+	}
+	else if (duration === 0) {
+		resolve();
+	}
+	else {
+		delay(resolve, duration);
+	}
+});

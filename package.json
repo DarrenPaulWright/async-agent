@@ -17,7 +17,16 @@
 		"docs-forRange": "jsdoc2md src/forRange.js > docs/forRange.md -t docs/docs.hbs --plugin dmd-readable -d 3",
 		"docs-debounce": "jsdoc2md src/debounce.js > docs/debounce.md -t docs/docs.hbs --plugin dmd-readable -d 3",
 		"docs-throttle": "jsdoc2md src/throttle.js > docs/throttle.md -t docs/docs.hbs --plugin dmd-readable -d 3",
-		"docs": "npm run docs-readme && npm run docs-defer && npm run docs-delay && npm run docs-clear && npm run docs-wait && npm run docs-forRange && npm run docs-debounce && npm run docs-throttle"
+		"docs-waitBy": "jsdoc2md src/waitBy.js > docs/waitBy.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-rejectAfterBy": "jsdoc2md src/rejectAfterBy.js > docs/rejectAfterBy.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-rejectAfterWith": "jsdoc2md src/rejectAfterWith.js > docs/rejectAfterWith.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-rejectBy": "jsdoc2md src/rejectBy.js > docs/rejectBy.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-rejectWith": "jsdoc2md src/rejectWith.js > docs/rejectWith.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-resolveAfterBy": "jsdoc2md src/resolveAfterBy.js > docs/resolveAfterBy.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-resolveAfterWith": "jsdoc2md src/resolveAfterWith.js > docs/resolveAfterWith.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-resolveBy": "jsdoc2md src/resolveBy.js > docs/resolveBy.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs-resolveWith": "jsdoc2md src/resolveWith.js > docs/resolveWith.md -t docs/docs.hbs --plugin dmd-readable -d 3",
+		"docs": "npm run docs-readme && npm run docs-defer && npm run docs-delay && npm run docs-clear && npm run docs-wait && npm run docs-forRange && npm run docs-debounce && npm run docs-throttle && npm run docs-waitBy && npm run docs-rejectAfterBy && npm run docs-rejectAfterWith && npm run docs-rejectBy && npm run docs-rejectWith && npm run docs-resolveAfterBy && npm run docs-resolveAfterWith && npm run docs-resolveBy && npm run docs-resolveWith"
 	},
 	"badges": [
 		{
