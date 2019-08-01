@@ -11,7 +11,7 @@ describe('resolveAfterWith', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').then((name) => {
-			assert.equal(name, 'testString');
+			assert.deepEqual(name, 'testString');
 			assert.isTrue(new Date() - start >= 20);
 		});
 	});

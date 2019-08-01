@@ -10,7 +10,7 @@ describe('rejectWith', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').catch((name) => {
-			assert.equal(name, 'testString');
+			assert.deepEqual(name, 'testString');
 		});
 	});
 });

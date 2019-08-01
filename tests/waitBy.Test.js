@@ -28,7 +28,7 @@ describe('waitBy', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').catch((name) => {
-			assert.equal(name, 'John Doe');
+			assert.deepEqual(name, 'John Doe');
 		});
 	});
 });

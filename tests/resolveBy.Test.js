@@ -13,7 +13,7 @@ describe('resolveBy', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').then((name) => {
-			assert.equal(name, 'John Doe');
+			assert.deepEqual(name, 'John Doe');
 		});
 	});
 });

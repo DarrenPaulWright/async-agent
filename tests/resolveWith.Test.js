@@ -10,7 +10,7 @@ describe('resolveWith', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').then((name) => {
-			assert.equal(name, 'testString');
+			assert.deepEqual(name, 'testString');
 		});
 	});
 });

@@ -1,4 +1,5 @@
 import wait from './wait';
+import waitBy from './waitBy';
 
 /**
  * Returns a function that returns a Promise that resolves with provided args after a delay.
@@ -10,4 +11,6 @@ import wait from './wait';
  *
  * @returns {function(): Promise}
  */
-export default (duration, ...args) => () => wait(duration).then(() => args);
+export default (duration, ...args) => waitBy(function(resolve) {
+	wait(duration).then(() => resolve(...args));
+});
