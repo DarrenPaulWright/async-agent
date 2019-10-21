@@ -13,13 +13,13 @@
 
 <br><a name="resolveWith"></a>
 
-### resolveWith(args) ⇒ <code>function</code>
+### resolveWith([args]) ⇒ <code>function</code>
 > Returns a function that returns a Promise that rejects with provided args.
 
 
 | Param | Description |
 | --- | --- |
-| args | Passed in to the reject function. |
+| [args] | Passed in to the reject function. |
 
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg

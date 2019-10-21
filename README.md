@@ -14,12 +14,33 @@
 <br><a name="Installation"></a>
 
 ### Installation
-```npm install async-agent```_Requires Babel 7.2+_
+```
+npm install async-agent
+```
+_Requires Babel 7.2+_
 
 <br><a name="Docs"></a>
 
 ### Docs
-- Function  - [defer](docs/defer.md)  - [delay](docs/delay.md)  - [clear](docs/clear.md)  - [wait](docs/wait.md)  - [debounce](docs/debounce.md)  - [throttle](docs/throttle.md)- Iteration  - [forRange](docs/forRange.md)- Higher-order  - [waitBy](docs/waitBy.md)  - [rejectAfterBy](docs/rejectAfterBy.md)  - [rejectAfterWith](docs/rejectAfterWith.md)  - [rejectBy](docs/rejectBy.md)  - [rejectWith](docs/rejectWith.md)  - [resolveAfterBy](docs/resolveAfterBy.md)  - [resolveAfterWith](docs/resolveAfterWith.md)  - [resolveBy](docs/resolveBy.md)  - [resolveWith](docs/resolveWith.md)
+- Function
+  - [defer](docs/defer.md)
+  - [delay](docs/delay.md)
+  - [clear](docs/clear.md)
+  - [wait](docs/wait.md)
+  - [debounce](docs/debounce.md)
+  - [throttle](docs/throttle.md)
+- Iteration
+  - [forRange](docs/forRange.md)
+- Higher-order
+  - [waitBy](docs/waitBy.md)
+  - [rejectAfterBy](docs/rejectAfterBy.md)
+  - [rejectAfterWith](docs/rejectAfterWith.md)
+  - [rejectBy](docs/rejectBy.md)
+  - [rejectWith](docs/rejectWith.md)
+  - [resolveAfterBy](docs/resolveAfterBy.md)
+  - [resolveAfterWith](docs/resolveAfterWith.md)
+  - [resolveBy](docs/resolveBy.md)
+  - [resolveWith](docs/resolveWith.md)
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

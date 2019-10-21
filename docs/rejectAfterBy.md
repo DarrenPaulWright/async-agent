@@ -13,14 +13,14 @@
 
 <br><a name="rejectAfterBy"></a>
 
-### rejectAfterBy([duration], [callback]) ⇒ <code>function</code>
+### rejectAfterBy(duration, callback) ⇒ <code>function</code>
 > Returns a function that returns a Promise that rejects with the results of a callback after a delay.
 
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [duration] | <code>Number</code> | <code>0</code> | Milliseconds |
-| [callback] | <code>function</code> |  | Context and args are set to the same as those passed to the initially returned function. |
+| Param | Type | Description |
+| --- | --- | --- |
+| duration | <code>Number</code> | Milliseconds |
+| callback | <code>function</code> | Context and args are set to the same as those passed to the initially returned function. |
 
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
