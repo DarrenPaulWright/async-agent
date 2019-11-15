@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { rejectAfterWith } from '../src/';
+import { rejectAfterWith } from '../index';
 
 describe('rejectAfterWith', () => {
 	it('should set the context on resolve', () => {

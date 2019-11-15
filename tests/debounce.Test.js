@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { debounce, wait } from '../src/';
+import { debounce, wait } from '../index';
 
 describe('debounce', () => {
 	it('should call the callback after other code is done', () => {

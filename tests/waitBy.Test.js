@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { waitBy } from '../src/';
+import { waitBy } from '../index';
 
 describe('waitBy', () => {
 	it('should set the context on resolve', () => {

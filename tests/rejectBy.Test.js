@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { rejectBy } from '../src/';
+import { rejectBy } from '../index';
 
 describe('rejectBy', () => {
 	it('should set the context on resolve', () => {

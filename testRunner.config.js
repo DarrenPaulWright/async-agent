@@ -1,6 +1,7 @@
 module.exports = [{
 	type: 'src',
 	files: [
+		'index.js',
 		'src/**/*.js'
 	]
 }, {

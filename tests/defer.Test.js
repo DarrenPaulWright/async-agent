@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { defer, clear } from '../src/';
+import { clear, defer } from '../index';
 
 describe('defer', () => {
 	it('should call the callback after other code is done', (done) => {

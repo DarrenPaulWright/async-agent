@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { resolveAfterBy } from '../src/';
+import { resolveAfterBy } from '../index';
 
 describe('resolveAfterBy', () => {
 	it('should set the context on resolve', () => {
