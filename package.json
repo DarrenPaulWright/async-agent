@@ -3,6 +3,7 @@
 	"version": "0.4.3",
 	"description": "A javascript library of async functions",
 	"main": "src/index.js",
+	"files": ["/src"],
 	"sideEffects": false,
 	"scripts": {
 		"test": "karma start --single-run",
