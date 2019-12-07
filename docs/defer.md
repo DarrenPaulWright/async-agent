@@ -23,18 +23,7 @@
 | callback | <code>function</code> | 
 
 **Example**  
-``` javascript
-import { defer } from 'async-agent';
-
-defer(() => {
-    console.log('2');
-});
-
-console.log('1');
-
-// => 1
-// => 2
-```
+``` javascriptimport { defer } from 'async-agent';defer(() => {    console.log('2');});console.log('1');// => 1// => 2```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

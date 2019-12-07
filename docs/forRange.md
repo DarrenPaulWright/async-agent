@@ -25,38 +25,7 @@
 | callback | <code>function</code> | Must return a promise. If this promise is rejected then iteration stops and the returned promise is resolved. |
 
 **Example**  
-``` javascript
-import { forRange } from 'async-agent';
-
-const output = [];
-
-forRange(3, 10, (index) => new Promise((resolve) => {
-        output.push(index);
-        resolve();
-    })
-    .then(() => {
-        console.log(output);
-    }
-
-// => [3, 4, 5, 6, 7, 8, 9, 10]
-
-const outputRight = [];
-
-forRange(10, 3, (index) => new Promise((resolve, reject) => {
-        outputRight.push(index);
-        if (index === 7) {
-            reject();
-        }
-        else {
-            resolve();
-        }
-    })
-    .then(() => {
-        console.log(outputRight);
-    }
-
-// => [10, 9, 8, 7]
-```
+``` javascriptimport { forRange } from 'async-agent';const output = [];forRange(3, 10, (index) => new Promise((resolve) => {        output.push(index);        resolve();    })    .then(() => {        console.log(output);    }// => [3, 4, 5, 6, 7, 8, 9, 10]const outputRight = [];forRange(10, 3, (index) => new Promise((resolve, reject) => {        outputRight.push(index);        if (index === 7) {            reject();        }        else {            resolve();        }    })    .then(() => {        console.log(outputRight);    }// => [10, 9, 8, 7]```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

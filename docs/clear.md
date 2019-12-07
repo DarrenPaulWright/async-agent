@@ -22,19 +22,7 @@
 | id | <code>Number</code> | An id returned from defer or delay |
 
 **Example**  
-``` javascript
-import { delay, clear } from 'async-agent';
-
-const id = delay(() => {
-    console.log('2');
-}, 1000);
-
-console.log('1');
-
-clear(id);
-
-// => 1
-```
+``` javascriptimport { delay, clear } from 'async-agent';const id = delay(() => {    console.log('2');}, 1000);console.log('1');clear(id);// => 1```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

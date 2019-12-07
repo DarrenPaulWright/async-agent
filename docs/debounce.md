@@ -28,20 +28,7 @@
 | [options.trailing] | <code>Boolean</code> | <code>true</code> | If false then the callback will only be called on the leading edge. |
 
 **Example**  
-``` javascript
-import { debounce } from 'async-agent';
-
-const debounced = debounce(() => {
-    console.log('1');
-});
-
-debounced();
-debounced();
-debounced();
-debounced();
-
-// => 1
-```
+``` javascriptimport { debounce } from 'async-agent';const debounced = debounce(() => {    console.log('1');});debounced();debounced();debounced();debounced();// => 1```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

@@ -24,18 +24,7 @@
 | [duration] | <code>Number</code> | <code>0</code> | 
 
 **Example**  
-``` javascript
-import { delay } from 'async-agent';
-
-delay(() => {
-    console.log('2');
-}, 1000);
-
-console.log('1');
-
-// => 1
-// (after 1000ms) => 2
-```
+``` javascriptimport { delay } from 'async-agent';delay(() => {    console.log('2');}, 1000);console.log('1');// => 1// (after 1000ms) => 2```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

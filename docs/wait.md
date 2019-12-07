@@ -22,19 +22,7 @@
 | [duration] | <code>Number</code>, <code>function</code> | <code>0</code> | 
 
 **Example**  
-``` javascript
-import { wait } from 'async-agent';
-
-wait(1000)
-    .then(() => {
-        console.log('2');
-    });
-
-console.log('1');
-
-// => 1
-// (after 1000ms) => 2
-```
+``` javascriptimport { wait } from 'async-agent';wait(1000)    .then(() => {        console.log('2');    });console.log('1');// => 1// (after 1000ms) => 2```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent
