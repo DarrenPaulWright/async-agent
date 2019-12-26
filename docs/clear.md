@@ -13,7 +13,7 @@
 
 <br><a name="clear"></a>
 
-### clear(id)
+## clear(id)
 > Clears a defer or delay callback.
 
 

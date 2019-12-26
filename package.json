@@ -10,63 +10,50 @@
 	"scripts": {
 		"test": "karma start --single-run",
 		"test-watch": "karma start",
-		"version": "npm run docs && git add docs",
-		"docs:readme": "jsdoc2md index.js > README.md",
-		"docs:defer": "jsdoc2md src/defer.js > docs/defer.md",
-		"docs:delay": "jsdoc2md src/delay.js > docs/delay.md",
-		"docs:clear": "jsdoc2md src/clear.js > docs/clear.md",
-		"docs:wait": "jsdoc2md src/wait.js > docs/wait.md",
-		"docs:forRange": "jsdoc2md src/forRange.js > docs/forRange.md",
-		"docs:debounce": "jsdoc2md src/debounce.js > docs/debounce.md",
-		"docs:throttle": "jsdoc2md src/throttle.js > docs/throttle.md",
-		"docs:waitBy": "jsdoc2md src/waitBy.js > docs/waitBy.md",
-		"docs:rejectAfterBy": "jsdoc2md src/rejectAfterBy.js > docs/rejectAfterBy.md",
-		"docs:rejectAfterWith": "jsdoc2md src/rejectAfterWith.js > docs/rejectAfterWith.md",
-		"docs:rejectBy": "jsdoc2md src/rejectBy.js > docs/rejectBy.md",
-		"docs:rejectWith": "jsdoc2md src/rejectWith.js > docs/rejectWith.md",
-		"docs:resolveAfterBy": "jsdoc2md src/resolveAfterBy.js > docs/resolveAfterBy.md",
-		"docs:resolveAfterWith": "jsdoc2md src/resolveAfterWith.js > docs/resolveAfterWith.md",
-		"docs:resolveBy": "jsdoc2md src/resolveBy.js > docs/resolveBy.md",
-		"docs:resolveWith": "jsdoc2md src/resolveWith.js > docs/resolveWith.md",
-		"docs": "run-p \"docs:* -- -t docs/docs.hbs --plugin dmd-readable\""
+		"patch": "npm version patch && npm publish",
+		"minor": "npm version minor && npm publish",
+		"major": "npm version major && npm publish",
+		"preversion": "npm test && npm run docs && git add --all && git diff --staged --quiet || git commit -m \"Updating docs\"",
+		"postpublish": "git push --follow-tags",
+		"deps": "ncu -u && npm install",
+		"deps-commit": "npm run deps && git add --all && git diff --staged --quiet || git commit -m \"Updating dependencies\"",
+		"deps-patch": "npm run deps-commit && npm run patch",
+		"docs": "exec-each src/**/*.js --out docs/{basefile}.md jsdoc2md -- {path} -t node_modules/dmd-readable/docs.hbs --plugin dmd-readable && jsdoc2md index.js src/**/*.js > README.md -t node_modules/dmd-readable/overview.hbs --plugin node_modules/dmd-readable/overview-plugin.js"
 	},
-	"badges": [
-		{
-			"name": "npm",
-			"image": "https://img.shields.io/npm/v/async-agent.svg",
-			"url": "https://npmjs.com/package/async-agent"
+	"badges": {
+		"npm": {
+			"image": "https://img.shields.io/npm/v/{{name}}.svg",
+			"url": "https://npmjs.com/package/{{name}}"
 		},
-		{
-			"name": "build",
-			"image": "https://travis-ci.org/DarrenPaulWright/async-agent.svg?branch=master",
-			"url": "https://travis-ci.org/DarrenPaulWright/async-agent"
+		"build": {
+			"base": "https://travis-ci.org/DarrenPaulWright/",
+			"image": "{{name}}.svg?branch=master",
+			"url": "{{name}}"
 		},
-		{
-			"name": "coverage",
-			"image": "https://coveralls.io/repos/github/DarrenPaulWright/async-agent/badge.svg?branch=master",
-			"url": "https://coveralls.io/github/DarrenPaulWright/async-agent?branch=master"
+		"coverage": {
+			"base": "https://coveralls.io/",
+			"image": "repos/github/DarrenPaulWright/{{name}}/badge.svg?branch=master",
+			"url": "github/DarrenPaulWright/{{name}}?branch=master"
 		},
-		{
-			"name": "deps",
-			"image": "https://david-dm.org/darrenpaulwright/async-agent.svg",
-			"url": "https://david-dm.org/darrenpaulwright/async-agent"
+		"deps": {
+			"image": "https://david-dm.org/darrenpaulwright/{{name}}.svg",
+			"url": "https://david-dm.org/darrenpaulwright/{{name}}"
 		},
-		{
-			"name": "size",
-			"image": "https://packagephobia.now.sh/badge?p=async-agent",
-			"url": "https://packagephobia.now.sh/result?p=async-agent"
+		"size": {
+			"base": "https://packagephobia.now.sh/",
+			"image": "badge?p={{name}}",
+			"url": "result?p={{name}}"
 		},
-		{
-			"name": "vulnerabilities",
-			"image": "https://snyk.io/test/github/DarrenPaulWright/async-agent/badge.svg?targetFile=package.json",
-			"url": "https://snyk.io/test/github/DarrenPaulWright/async-agent?targetFile=package.json"
+		"vulnerabilities": {
+			"base": "https://snyk.io/test/github/DarrenPaulWright/{{name}}",
+			"image": "/badge.svg?targetFile=package.json",
+			"url": "?targetFile=package.json"
 		},
-		{
-			"name": "license",
-			"image": "https://img.shields.io/github/license/DarrenPaulWright/async-agent.svg",
-			"url": "https://npmjs.com/package/async-agent/LICENSE.md"
+		"license": {
+			"image": "https://img.shields.io/github/license/DarrenPaulWright/{{name}}.svg",
+			"url": "https://npmjs.com/package/{{name}}/LICENSE.md"
 		}
-	],
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/DarrenPaulWright/async-agent.git"
@@ -88,13 +75,9 @@
 	},
 	"homepage": "https://github.com/DarrenPaulWright/async-agent#readme",
 	"devDependencies": {
-		"@babel/core": "^7.7.5",
-		"@babel/preset-env": "^7.7.5",
-		"dmd-readable": "^1.0.1",
+		"dmd-readable": "^1.1.0",
+		"exec-each": "0.0.3",
 		"jsdoc-to-markdown": "^5.0.3",
-		"karma-webpack-bundle": "^0.0.5",
-		"npm-run-all": "^4.1.5",
-		"webpack": "^4.41.2",
-		"webpack-cli": "^3.3.10"
+		"karma-webpack-bundle": "^0.0.8"
 	}
 }

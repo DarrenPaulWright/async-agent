@@ -13,7 +13,7 @@
 
 <br><a name="resolveWith"></a>
 
-### resolveWith([args]) ⇒ <code>function</code>
+## resolveWith([args]) ⇒ <code>function</code>
 > Returns a function that returns a Promise that resolves with provided args.
 
 

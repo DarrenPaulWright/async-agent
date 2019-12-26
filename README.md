@@ -10,37 +10,69 @@
 [![vulnerabilities][vulnerabilities]][vulnerabilities-url]
 [![license][license]][license-url]
 
-
 <br><a name="Installation"></a>
 
-### Installation
+## Installation
 ```
 npm install async-agent
 ```
 _Requires Babel 7.2+_
 
-<br><a name="Docs"></a>
 
-### Docs
-- Function
-  - [defer](docs/defer.md)
-  - [delay](docs/delay.md)
-  - [clear](docs/clear.md)
-  - [wait](docs/wait.md)
-  - [debounce](docs/debounce.md)
-  - [throttle](docs/throttle.md)
-- Iteration
-  - [forRange](docs/forRange.md)
-- Higher-order
-  - [waitBy](docs/waitBy.md)
-  - [rejectAfterBy](docs/rejectAfterBy.md)
-  - [rejectAfterWith](docs/rejectAfterWith.md)
-  - [rejectBy](docs/rejectBy.md)
-  - [rejectWith](docs/rejectWith.md)
-  - [resolveAfterBy](docs/resolveAfterBy.md)
-  - [resolveAfterWith](docs/resolveAfterWith.md)
-  - [resolveBy](docs/resolveBy.md)
-  - [resolveWith](docs/resolveWith.md)
+<br>
+
+## Functions
+
+<dl>
+<dt><a href="docs/clear.md">clear(id)</a></dt>
+<dd><p>Clears a defer or delay callback.</p>
+</dd>
+<dt><a href="docs/debounce.md">debounce(callback, [duration], [options])</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a new debounced function that waits to call the callback until <code>duration</code> ms have passed since the last time it was called.</p>
+</dd>
+<dt><a href="docs/defer.md">defer(callback)</a> ⇒ <code>Number</code></dt>
+<dd><p>Defers the calling of a callback until the current stack is complete.</p>
+</dd>
+<dt><a href="docs/delay.md">delay(callback, [duration])</a> ⇒ <code>Number</code></dt>
+<dd><p>Delays the calling of a callback for a given amount of time.</p>
+</dd>
+<dt><a href="docs/throttle.md">throttle(callback, [duration], [options])</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a new throttled function that waits to call the callback until <code>duration</code> ms have passed. Any calls to it during that time will do nothing.</p>
+</dd>
+<dt><a href="docs/wait.md">wait([duration])</a> ⇒ <code>Promise</code></dt>
+<dd><p>Delays the resolving of a new Promise for a given amount of time. Provides the same functionality as defer and delay, but with promises. Also serves as a wrapper for a Promise if a callback is provided.</p>
+</dd>
+<dt><a href="docs/rejectAfterBy.md">rejectAfterBy(duration, callback)</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that rejects with the results of a callback after a delay.</p>
+</dd>
+<dt><a href="docs/rejectAfterWith.md">rejectAfterWith([duration], [args])</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that rejects with provided args after a delay.</p>
+</dd>
+<dt><a href="docs/rejectBy.md">rejectBy([callback])</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that rejects with the results of a callback.</p>
+</dd>
+<dt><a href="docs/resolveWith.md">resolveWith([args])</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that rejects with provided args.</p>
+</dd>
+<dt><a href="docs/resolveAfterBy.md">resolveAfterBy(duration, callback)</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that resolves with the results of a callback after a delay.</p>
+</dd>
+<dt><a href="docs/resolveAfterWith.md">resolveAfterWith([duration], [args])</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that resolves with provided args after a delay.</p>
+</dd>
+<dt><a href="docs/resolveBy.md">resolveBy([callback])</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that resolves with the results of a callback.</p>
+</dd>
+<dt><a href="docs/resolveWith.md">resolveWith([args])</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that resolves with provided args.</p>
+</dd>
+<dt><a href="docs/waitBy.md">waitBy(callback)</a> ⇒ <code>function</code></dt>
+<dd><p>Returns a function that returns a Promise that calls a callback.</p>
+</dd>
+<dt><a href="docs/forRange.md">forRange(first, last, callback)</a> ⇒ <code>Promise</code></dt>
+<dd><p>Calls an async callback for a range of numbers.</p>
+</dd>
+</dl>
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

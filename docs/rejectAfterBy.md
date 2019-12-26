@@ -13,7 +13,7 @@
 
 <br><a name="rejectAfterBy"></a>
 
-### rejectAfterBy(duration, callback) ⇒ <code>function</code>
+## rejectAfterBy(duration, callback) ⇒ <code>function</code>
 > Returns a function that returns a Promise that rejects with the results of a callback after a delay.
 
 

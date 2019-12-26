@@ -13,7 +13,7 @@
 
 <br><a name="resolveAfterWith"></a>
 
-### resolveAfterWith([duration], [args]) ⇒ <code>function</code>
+## resolveAfterWith([duration], [args]) ⇒ <code>function</code>
 > Returns a function that returns a Promise that resolves with provided args after a delay.
 
 

@@ -13,7 +13,7 @@
 
 <br><a name="rejectAfterWith"></a>
 
-### rejectAfterWith([duration], [args]) ⇒ <code>function</code>
+## rejectAfterWith([duration], [args]) ⇒ <code>function</code>
 > Returns a function that returns a Promise that rejects with provided args after a delay.
 
 

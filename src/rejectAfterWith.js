@@ -4,6 +4,7 @@ import wait from './wait';
  * Returns a function that returns a Promise that rejects with provided args after a delay.
  *
  * @function rejectAfterWith
+ * @category Higher-order
  *
  * @arg {Number} [duration=0] - Milliseconds
  * @arg {*} [args] - Passed in to the reject function.

@@ -13,7 +13,7 @@
 
 <br><a name="waitBy"></a>
 
-### waitBy(callback) ⇒ <code>function</code>
+## waitBy(callback) ⇒ <code>function</code>
 > Returns a function that returns a Promise that calls a callback.
 
 

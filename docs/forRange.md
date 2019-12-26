@@ -13,7 +13,7 @@
 
 <br><a name="forRange"></a>
 
-### forRange(first, last, callback) ⇒ <code>Promise</code>
+## forRange(first, last, callback) ⇒ <code>Promise</code>
 > Calls an async callback for a range of numbers.
 
 **Returns**: <code>Promise</code> - The promise is resolved after every callback is resolved or one is rejected.  

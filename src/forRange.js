@@ -38,6 +38,7 @@ import wait from './wait';
  * ```
  *
  * @function forRange
+ * @category Iteration
  *
  * @arg {Integer} first - The first number passed to the callback
  * @arg {Integer} last - The last number passed to the callback

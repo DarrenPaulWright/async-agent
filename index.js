@@ -1,35 +1,9 @@
 /**
  * @name Installation
+ * @private
  * @summary
  *
- * ```
- * npm install async-agent
- * ```
  * _Requires Babel 7.2+_
- */
-
-/**
- * @name Docs
- * @summary
- * - Function
- *   - [defer](docs/defer.md)
- *   - [delay](docs/delay.md)
- *   - [clear](docs/clear.md)
- *   - [wait](docs/wait.md)
- *   - [debounce](docs/debounce.md)
- *   - [throttle](docs/throttle.md)
- * - Iteration
- *   - [forRange](docs/forRange.md)
- * - Higher-order
- *   - [waitBy](docs/waitBy.md)
- *   - [rejectAfterBy](docs/rejectAfterBy.md)
- *   - [rejectAfterWith](docs/rejectAfterWith.md)
- *   - [rejectBy](docs/rejectBy.md)
- *   - [rejectWith](docs/rejectWith.md)
- *   - [resolveAfterBy](docs/resolveAfterBy.md)
- *   - [resolveAfterWith](docs/resolveAfterWith.md)
- *   - [resolveBy](docs/resolveBy.md)
- *   - [resolveWith](docs/resolveWith.md)
  */
 export { default as defer } from './src/defer';
 export { default as delay } from './src/delay';

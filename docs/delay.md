@@ -13,7 +13,7 @@
 
 <br><a name="delay"></a>
 
-### delay(callback, [duration]) ⇒ <code>Number</code>
+## delay(callback, [duration]) ⇒ <code>Number</code>
 > Delays the calling of a callback for a given amount of time.
 
 **Returns**: <code>Number</code> - An id that can be used to clear the callback before it gets called.  

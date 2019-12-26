@@ -13,7 +13,7 @@
 
 <br><a name="debounce"></a>
 
-### debounce(callback, [duration], [options]) ⇒ <code>function</code>
+## debounce(callback, [duration], [options]) ⇒ <code>function</code>
 > Returns a new debounced function that waits to call the callback until `duration` ms have passed since the last time it was called.
 
 **Returns**: <code>function</code> - The debounced function. Has two methods: .clear() clears any current timeouts, and .flush() immediately calls any waiting callbacks.  

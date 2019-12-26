@@ -13,7 +13,7 @@
 
 <br><a name="resolveBy"></a>
 
-### resolveBy([callback]) ⇒ <code>function</code>
+## resolveBy([callback]) ⇒ <code>function</code>
 > Returns a function that returns a Promise that resolves with the results of a callback.
 
 

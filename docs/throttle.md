@@ -13,7 +13,7 @@
 
 <br><a name="throttle"></a>
 
-### throttle(callback, [duration], [options]) ⇒ <code>function</code>
+## throttle(callback, [duration], [options]) ⇒ <code>function</code>
 > Returns a new throttled function that waits to call the callback until `duration` ms have passed. Any calls to it during that time will do nothing.
 
 **Returns**: <code>function</code> - The throttled function. Has two methods: .clear() clears any current timeouts, and .flush() immediately calls any waiting callbacks.  

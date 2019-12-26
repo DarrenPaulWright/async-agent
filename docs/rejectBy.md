@@ -13,7 +13,7 @@
 
 <br><a name="rejectBy"></a>
 
-### rejectBy([callback]) ⇒ <code>function</code>
+## rejectBy([callback]) ⇒ <code>function</code>
 > Returns a function that returns a Promise that rejects with the results of a callback.
 
 

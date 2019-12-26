@@ -4,6 +4,7 @@ import rejectAfterWith from './rejectAfterWith';
  * Returns a function that returns a Promise that rejects with provided args.
  *
  * @function resolveWith
+ * @category Higher-order
  *
  * @arg [args] - Passed in to the reject function.
  *

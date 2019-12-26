@@ -13,7 +13,7 @@
 
 <br><a name="resolveAfterBy"></a>
 
-### resolveAfterBy(duration, callback) ⇒ <code>function</code>
+## resolveAfterBy(duration, callback) ⇒ <code>function</code>
 > Returns a function that returns a Promise that resolves with the results of a callback after a delay.
 
 
