@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { rejectAfterBy } from '../index';
+import { rejectAfterBy } from '../index.js';
 
 describe('resolveAfterBy', () => {
 	it('should set the context on resolve', () => {

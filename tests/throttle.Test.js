@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { throttle, wait } from '../index';
+import { throttle, wait } from '../index.js';
 
 describe('throttle', () => {
 	it('should call the callback after other code is done if leading-false', () => {

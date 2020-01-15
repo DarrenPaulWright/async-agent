@@ -1,4 +1,4 @@
-import resolveAfterWith from './resolveAfterWith';
+import resolveAfterWith from './resolveAfterWith.js';
 
 /**
  * Returns a function that returns a Promise that resolves with provided args.

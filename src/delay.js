@@ -1,4 +1,3 @@
-
 /**
  * Delays the calling of a callback for a given amount of time.
  *

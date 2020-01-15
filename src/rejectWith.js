@@ -1,4 +1,4 @@
-import rejectAfterWith from './rejectAfterWith';
+import rejectAfterWith from './rejectAfterWith.js';
 
 /**
  * Returns a function that returns a Promise that rejects with provided args.

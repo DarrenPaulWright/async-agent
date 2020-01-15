@@ -1,4 +1,4 @@
-import rejectAfterBy from './rejectAfterBy';
+import rejectAfterBy from './rejectAfterBy.js';
 
 /**
  * Returns a function that returns a Promise that rejects with the results of a callback.

@@ -1,4 +1,4 @@
-import resolveAfterBy from './resolveAfterBy';
+import resolveAfterBy from './resolveAfterBy.js';
 
 /**
  * Returns a function that returns a Promise that resolves with the results of a callback.

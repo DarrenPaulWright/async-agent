@@ -1,5 +1,5 @@
-import wait from './wait';
-import waitBy from './waitBy';
+import wait from './wait.js';
+import waitBy from './waitBy.js';
 
 /**
  * Returns a function that returns a Promise that rejects with the results of a callback after a delay.

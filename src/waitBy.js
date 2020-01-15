@@ -1,4 +1,4 @@
-import wait from './wait';
+import wait from './wait.js';
 
 /**
  * Returns a function that returns a Promise that calls a callback.

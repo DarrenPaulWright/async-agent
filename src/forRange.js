@@ -1,4 +1,4 @@
-import wait from './wait';
+import wait from './wait.js';
 
 /**
  * Calls an async callback for a range of numbers.

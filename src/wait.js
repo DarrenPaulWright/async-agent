@@ -1,4 +1,4 @@
-import delay from './delay';
+import delay from './delay.js';
 
 /**
  * Delays the resolving of a new Promise for a given amount of time. Provides the same functionality as defer and delay, but with promises. Also serves as a wrapper for a Promise if a callback is provided.

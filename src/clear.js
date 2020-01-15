@@ -1,4 +1,3 @@
-
 /**
  * Clears a defer or delay callback.
  *

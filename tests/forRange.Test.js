@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { forRange } from '../index';
+import { forRange } from '../index.js';
 
 describe('forRange', () => {
 	it('should call the callback for each item in the range', () => {

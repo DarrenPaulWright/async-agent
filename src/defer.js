@@ -1,4 +1,4 @@
-import delay from './delay';
+import delay from './delay.js';
 
 /**
  * Defers the calling of a callback until the current stack is complete.

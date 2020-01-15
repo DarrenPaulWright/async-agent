@@ -1,4 +1,4 @@
-import wait from './wait';
+import wait from './wait.js';
 
 /**
  * Returns a function that returns a Promise that rejects with provided args after a delay.

@@ -1,4 +1,4 @@
-import debounce from './debounce';
+import debounce from './debounce.js';
 
 /**
  * Returns a new throttled function that waits to call the callback until `duration` ms have passed. Any calls to it during that time will do nothing.

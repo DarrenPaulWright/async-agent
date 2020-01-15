@@ -1,5 +1,5 @@
-import delay from './delay';
-import clear from './clear';
+import clear from './clear.js';
+import delay from './delay.js';
 
 /**
  * Returns a new debounced function that waits to call the callback until `duration` ms have passed since the last time it was called.
