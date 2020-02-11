@@ -1,5 +1,8 @@
 # Async Agent
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/DarrenPaulWright/async-agent.svg)](https://greenkeeper.io/)
+
+
 > A javascript library of async functions
 >
 > [![npm][npm]][npm-url]
