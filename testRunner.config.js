@@ -7,6 +7,6 @@ module.exports = [{
 }, {
 	type: 'specs',
 	files: [
-		'tests/*.Test.js'
+		'tests/*.test.js'
 	]
 }];
