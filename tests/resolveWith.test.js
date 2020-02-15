@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { resolveWith } from '../index.js';
 
 describe('resolveWith', () => {
@@ -10,7 +10,7 @@ describe('resolveWith', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').then((name) => {
-			assert.deepEqual(name, 'testString');
+			assert.equal(name, 'testString');
 		});
 	});
 });

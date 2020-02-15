@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { rejectWith } from '../index.js';
 
 describe('rejectWith', () => {
@@ -10,7 +10,7 @@ describe('rejectWith', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').catch((name) => {
-			assert.deepEqual(name, 'testString');
+			assert.equal(name, 'testString');
 		});
 	});
 });

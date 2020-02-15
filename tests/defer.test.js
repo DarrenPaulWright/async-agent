@@ -1,11 +1,11 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { clear, defer } from '../index.js';
 
 describe('defer', () => {
 	it('should call the callback after other code is done', (done) => {
 		let testVar = 0;
 		defer(() => {
-			assert.equal(testVar, 1);
+			assert.is(testVar, 1);
 			done();
 		});
 		testVar++;
@@ -20,7 +20,7 @@ describe('defer', () => {
 			testVar = 2;
 		});
 		defer(() => {
-			assert.equal(testVar, 2);
+			assert.is(testVar, 2);
 			done();
 		});
 	});
@@ -31,7 +31,7 @@ describe('defer', () => {
 			testVar++;
 		});
 		defer(() => {
-			assert.equal(testVar, 0);
+			assert.is(testVar, 0);
 			done();
 		});
 		clear(id);

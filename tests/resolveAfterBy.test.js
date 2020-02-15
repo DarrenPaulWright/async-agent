@@ -1,11 +1,11 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { resolveAfterBy } from '../index.js';
 
 describe('resolveAfterBy', () => {
 	it('should set the context on resolve', () => {
 		const Thing = function() {
 			this.do = resolveAfterBy(20, function(first, last) {
-				assert.equal(this, thing);
+				assert.is(this, thing);
 				return `${first} ${last}`;
 			});
 		};
@@ -14,8 +14,8 @@ describe('resolveAfterBy', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').then((name) => {
-			assert.deepEqual(name, 'John Doe');
-			assert.isTrue(new Date() - start >= 20);
+			assert.equal(name, 'John Doe');
+			assert.atLeast(new Date() - start, 20);
 		});
 	});
 });

@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { debounce, wait } from '../index.js';
 
 describe('debounce', () => {
@@ -12,15 +12,15 @@ describe('debounce', () => {
 			theseArgs = args;
 		});
 
-		debounced.call('test1', 'test2', 'test3');
+		debounced.call(debounced, 'test2', 'test3');
 
-		assert.equal(testVar, 0);
+		assert.is(testVar, 0);
 
 		return wait(1)
 			.then(() => {
-				assert.equal(testVar, 1);
-				assert.equal(context, 'test1');
-				assert.deepEqual(theseArgs, ['test2', 'test3']);
+				assert.is(testVar, 1);
+				assert.is(context, debounced);
+				assert.equal(theseArgs, ['test2', 'test3']);
 			});
 	});
 
@@ -36,17 +36,17 @@ describe('debounce', () => {
 			leading: true
 		});
 
-		debounced.call('test1', 'test2', 'test3');
+		debounced.call(debounced, 'test2', 'test3');
 
-		assert.equal(testVar, 1);
-		assert.equal(context, 'test1');
-		assert.deepEqual(theseArgs, ['test2', 'test3']);
+		assert.is(testVar, 1);
+		assert.is(context, debounced);
+		assert.equal(theseArgs, ['test2', 'test3']);
 
 		return wait(1)
 			.then(() => {
-				assert.equal(testVar, 1);
-				assert.equal(context, 'test1');
-				assert.deepEqual(theseArgs, ['test2', 'test3']);
+				assert.is(testVar, 1);
+				assert.is(context, debounced);
+				assert.equal(theseArgs, ['test2', 'test3']);
 			});
 	});
 
@@ -63,11 +63,11 @@ describe('debounce', () => {
 		debounced();
 		debounced();
 
-		assert.equal(testVar, 1);
+		assert.is(testVar, 1);
 
 		return wait(1)
 			.then(() => {
-				assert.equal(testVar, 2);
+				assert.is(testVar, 2);
 			});
 	});
 
@@ -84,11 +84,11 @@ describe('debounce', () => {
 		debounced();
 		debounced();
 
-		assert.equal(testVar, 1);
+		assert.is(testVar, 1);
 
 		return wait(1)
 			.then(() => {
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 			});
 	});
 
@@ -105,21 +105,21 @@ describe('debounce', () => {
 		debounced();
 		debounced();
 
-		assert.equal(testVar, 1);
+		assert.is(testVar, 1);
 
 		return wait(5)
 			.then(() => {
 				debounced();
 				debounced();
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 				return wait(6);
 			})
 			.then(() => {
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 				return wait(5);
 			})
 			.then(() => {
-				assert.equal(testVar, 2);
+				assert.is(testVar, 2);
 			});
 	});
 
@@ -136,22 +136,22 @@ describe('debounce', () => {
 		debounced();
 		debounced();
 
-		assert.equal(testVar, 1);
+		assert.is(testVar, 1);
 
 		return wait(5)
 			.then(() => {
 				debounced();
 				debounced();
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 				return wait(6);
 			})
 			.then(() => {
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 				debounced.clear();
 				return wait(5);
 			})
 			.then(() => {
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 			});
 	});
 
@@ -168,23 +168,23 @@ describe('debounce', () => {
 		debounced();
 		debounced();
 
-		assert.equal(testVar, 1);
+		assert.is(testVar, 1);
 
 		return wait(5)
 			.then(() => {
 				debounced();
 				debounced();
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 				return wait(6);
 			})
 			.then(() => {
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 				debounced.flush();
-				assert.equal(testVar, 2);
+				assert.is(testVar, 2);
 				return wait(5);
 			})
 			.then(() => {
-				assert.equal(testVar, 2);
+				assert.is(testVar, 2);
 			});
 	});
 
@@ -201,23 +201,23 @@ describe('debounce', () => {
 		debounced();
 		debounced();
 
-		assert.equal(testVar, 0);
+		assert.is(testVar, 0);
 
 		return wait(3)
 			.then(() => {
 				debounced();
 				debounced();
-				assert.equal(testVar, 0);
+				assert.is(testVar, 0);
 				return wait(3);
 			})
 			.then(() => {
 				debounced();
 				debounced();
-				assert.equal(testVar, 0);
+				assert.is(testVar, 0);
 				return wait(9);
 			})
 			.then(() => {
-				assert.equal(testVar, 1);
+				assert.is(testVar, 1);
 			});
 	});
 
@@ -234,21 +234,21 @@ describe('debounce', () => {
 		debounced();
 		debounced();
 
-		assert.equal(testVar, 0, 'before wait');
+		assert.is(testVar, 0, 'before wait');
 
 		const start = Date.now();
 
 		return wait()
 			.then(() => {
-				assert.equal(testVar, 0, 'after first wait');
+				assert.is(testVar, 0, 'after first wait');
 				return wait(11 - (Date.now() - start));
 			})
 			.then(() => {
-				assert.equal(testVar, 1, 'after second wait');
+				assert.is(testVar, 1, 'after second wait');
 				return wait(9);
 			})
 			.then(() => {
-				assert.equal(testVar, 1, 'after third wait');
+				assert.is(testVar, 1, 'after third wait');
 			});
 	});
 });

@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { forRange } from '../index.js';
 
 describe('forRange', () => {
@@ -9,7 +9,7 @@ describe('forRange', () => {
 			resolve();
 		}))
 			.then(() => {
-				assert.deepEqual(testVar, [3, 4, 5, 6, 7, 8, 9, 10]);
+				assert.equal(testVar, [3, 4, 5, 6, 7, 8, 9, 10]);
 			});
 	});
 
@@ -20,7 +20,7 @@ describe('forRange', () => {
 			resolve();
 		}))
 			.then(() => {
-				assert.deepEqual(testVar, [10, 9, 8, 7, 6, 5, 4, 3]);
+				assert.equal(testVar, [10, 9, 8, 7, 6, 5, 4, 3]);
 			});
 	});
 
@@ -36,7 +36,7 @@ describe('forRange', () => {
 			}
 		}))
 			.then(() => {
-				assert.deepEqual(testVar, [3, 4, 5, 6, 7]);
+				assert.equal(testVar, [3, 4, 5, 6, 7]);
 			});
 	});
 
@@ -52,7 +52,7 @@ describe('forRange', () => {
 			}
 		}))
 			.then(() => {
-				assert.deepEqual(testVar, [10, 9, 8, 7]);
+				assert.equal(testVar, [10, 9, 8, 7]);
 			});
 	});
 });

@@ -1,11 +1,11 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { clear, delay } from '../index.js';
 
 describe('delay', () => {
 	it('should call the callback after other code is done', (done) => {
 		let testVar = 0;
 		delay(() => {
-			assert.equal(testVar, 1);
+			assert.is(testVar, 1);
 			done();
 		});
 		testVar++;
@@ -20,7 +20,7 @@ describe('delay', () => {
 			testVar = 2;
 		});
 		delay(() => {
-			assert.equal(testVar, 2);
+			assert.is(testVar, 2);
 			done();
 		});
 	});
@@ -31,7 +31,7 @@ describe('delay', () => {
 			testVar++;
 		});
 		delay(() => {
-			assert.equal(testVar, 0);
+			assert.is(testVar, 0);
 			done();
 		});
 		clear(id);
@@ -40,7 +40,7 @@ describe('delay', () => {
 	it('should call the callback after the allotted time', (done) => {
 		const now = performance.now();
 		delay(() => {
-			assert.isAbove(performance.now() - now, 9);
+			assert.moreThan(performance.now() - now, 9);
 			done();
 		}, 10);
 	});

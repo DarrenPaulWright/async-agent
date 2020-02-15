@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { resolveAfterWith } from '../index.js';
 
 describe('resolveAfterWith', () => {
@@ -11,8 +11,8 @@ describe('resolveAfterWith', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').then((name) => {
-			assert.deepEqual(name, 'testString');
-			assert.isTrue(new Date() - start >= 20);
+			assert.equal(name, 'testString');
+			assert.atLeast(new Date() - start, 20);
 		});
 	});
 });

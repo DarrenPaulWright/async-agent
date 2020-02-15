@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { throttle, wait } from '../index.js';
 
 describe('throttle', () => {
@@ -14,15 +14,15 @@ describe('throttle', () => {
 			leading: false
 		});
 
-		throttled.call('test1', 'test2', 'test3');
+		throttled.call(throttled, 'test2', 'test3');
 
-		assert.equal(totalCalls, 0);
+		assert.is(totalCalls, 0);
 
 		return wait(1)
 			.then(() => {
-				assert.equal(totalCalls, 1);
-				assert.equal(context, 'test1');
-				assert.deepEqual(theseArgs, ['test2', 'test3']);
+				assert.is(totalCalls, 1);
+				assert.is(context, throttled);
+				assert.equal(theseArgs, ['test2', 'test3']);
 			});
 	});
 
@@ -36,17 +36,17 @@ describe('throttle', () => {
 			theseArgs = args;
 		});
 
-		throttled.call('test1', 'test2', 'test3');
+		throttled.call(throttled, 'test2', 'test3');
 
-		assert.equal(totalCalls, 1);
-		assert.equal(context, 'test1');
-		assert.deepEqual(theseArgs, ['test2', 'test3']);
+		assert.is(totalCalls, 1);
+		assert.is(context, throttled);
+		assert.equal(theseArgs, ['test2', 'test3']);
 
 		return wait(1)
 			.then(() => {
-				assert.equal(totalCalls, 1);
-				assert.equal(context, 'test1');
-				assert.deepEqual(theseArgs, ['test2', 'test3']);
+				assert.is(totalCalls, 1);
+				assert.is(context, throttled);
+				assert.equal(theseArgs, ['test2', 'test3']);
 			});
 	});
 
@@ -61,11 +61,11 @@ describe('throttle', () => {
 		throttled();
 		throttled();
 
-		assert.equal(totalCalls, 1);
+		assert.is(totalCalls, 1);
 
 		return wait(1)
 			.then(() => {
-				assert.equal(totalCalls, 2);
+				assert.is(totalCalls, 2);
 			});
 	});
 
@@ -82,11 +82,11 @@ describe('throttle', () => {
 		throttled();
 		throttled();
 
-		assert.equal(totalCalls, 1);
+		assert.is(totalCalls, 1);
 
 		return wait(1)
 			.then(() => {
-				assert.equal(totalCalls, 1);
+				assert.is(totalCalls, 1);
 			});
 	});
 
@@ -101,17 +101,17 @@ describe('throttle', () => {
 		throttled();
 		throttled();
 
-		assert.equal(totalCalls, 1);
+		assert.is(totalCalls, 1);
 
 		return wait(5)
 			.then(() => {
 				throttled();
 				throttled();
-				assert.equal(totalCalls, 1);
+				assert.is(totalCalls, 1);
 				return wait(6);
 			})
 			.then(() => {
-				assert.equal(totalCalls, 2);
+				assert.is(totalCalls, 2);
 				return wait(10);
 			});
 	});
@@ -127,22 +127,22 @@ describe('throttle', () => {
 		throttled();
 		throttled();
 
-		assert.equal(totalCalls, 1);
+		assert.is(totalCalls, 1);
 
 		return wait()
 			.then(() => {
 				throttled();
 				throttled();
-				assert.equal(totalCalls, 1);
+				assert.is(totalCalls, 1);
 				return wait();
 			})
 			.then(() => {
-				assert.equal(totalCalls, 1);
+				assert.is(totalCalls, 1);
 				throttled.clear();
 				return wait(11);
 			})
 			.then(() => {
-				assert.equal(totalCalls, 1);
+				assert.is(totalCalls, 1);
 			});
 	});
 
@@ -159,23 +159,23 @@ describe('throttle', () => {
 		throttled();
 		throttled();
 
-		assert.equal(totalCalls, 1);
+		assert.is(totalCalls, 1);
 
 		return wait()
 			.then(() => {
 				throttled();
 				throttled();
-				assert.equal(totalCalls, 1);
+				assert.is(totalCalls, 1);
 				return wait();
 			})
 			.then(() => {
-				assert.equal(totalCalls, 1);
+				assert.is(totalCalls, 1);
 				throttled.flush();
-				assert.equal(totalCalls, 2);
+				assert.is(totalCalls, 2);
 				return wait(11);
 			})
 			.then(() => {
-				assert.equal(totalCalls, 2);
+				assert.is(totalCalls, 2);
 			});
 	});
 });

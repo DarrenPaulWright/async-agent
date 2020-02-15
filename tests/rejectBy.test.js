@@ -1,11 +1,11 @@
-import { assert } from 'chai';
+import { assert } from 'type-enforcer';
 import { rejectBy } from '../index.js';
 
 describe('rejectBy', () => {
 	it('should set the context on resolve', () => {
 		const Thing = function() {
 			this.do = rejectBy(function(first, last) {
-				assert.equal(this, thing);
+				assert.is(this, thing);
 				return `${first} ${last}`;
 			});
 		};
@@ -13,7 +13,7 @@ describe('rejectBy', () => {
 		const thing = new Thing();
 
 		return thing.do('John', 'Doe').catch((name) => {
-			assert.deepEqual(name, 'John Doe');
+			assert.equal(name, 'John Doe');
 		});
 	});
 });
