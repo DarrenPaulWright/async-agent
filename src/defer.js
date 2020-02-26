@@ -19,8 +19,8 @@ import delay from './delay.js';
  *
  * @function defer
  *
- * @arg {Function} callback
+ * @param {Function} callback - The callback to defer execution of.
  *
- * @returns {Number} An id that can be used to clear the callback before it gets called.
+ * @returns {number} An id that can be used to clear the callback before it gets called.
  */
 export default (callback) => delay(callback, 0);

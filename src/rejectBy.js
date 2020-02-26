@@ -6,7 +6,7 @@ import rejectAfterBy from './rejectAfterBy.js';
  * @function rejectBy
  * @category Higher-order
  *
- * @arg {function} [callback] - Context and args are set to the same as those passed to the initially returned function.
+ * @param {Function} [callback] - Context and args are set to the same as those passed to the initially returned function.
  *
  * @returns {function(): Promise}
  */

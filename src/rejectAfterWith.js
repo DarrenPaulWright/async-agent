@@ -6,8 +6,8 @@ import wait from './wait.js';
  * @function rejectAfterWith
  * @category Higher-order
  *
- * @arg {Number} [duration=0] - Milliseconds
- * @arg {*} [args] - Passed in to the reject function.
+ * @param {number} [duration=0] - Milliseconds
+ * @param {*} [args] - Passed in to the reject function.
  *
  * @returns {function(): Promise}
  */

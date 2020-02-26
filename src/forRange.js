@@ -1,6 +1,11 @@
 import wait from './wait.js';
 
 /**
+ * @typedef integer
+ * @private
+ */
+
+/**
  * Calls an async callback for a range of numbers.
  *
  * @example
@@ -40,9 +45,9 @@ import wait from './wait.js';
  * @function forRange
  * @category Iteration
  *
- * @arg {Integer} first - The first number passed to the callback
- * @arg {Integer} last - The last number passed to the callback
- * @arg {Function} callback - Must return a promise. If this promise is rejected then iteration stops and the returned promise is resolved.
+ * @param {integer} first - The first number passed to the callback
+ * @param {integer} last - The last number passed to the callback
+ * @param {Function} callback - Must return a promise. If this promise is rejected then iteration stops and the returned promise is resolved.
  *
  * @returns {Promise} The promise is resolved after every callback is resolved or one is rejected.
  */

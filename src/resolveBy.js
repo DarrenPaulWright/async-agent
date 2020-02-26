@@ -6,7 +6,7 @@ import resolveAfterBy from './resolveAfterBy.js';
  * @function resolveBy
  * @category Higher-order
  *
- * @arg {function} [callback] - Context and args are set to the same as those passed to the initially returned function.
+ * @param {Function} [callback] - Context and args are set to the same as those passed to the initially returned function.
  *
  * @returns {function(): Promise}
  */

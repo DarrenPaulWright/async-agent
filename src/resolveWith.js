@@ -6,7 +6,7 @@ import resolveAfterWith from './resolveAfterWith.js';
  * @function resolveWith
  * @category Higher-order
  *
- * @arg [args] - Passed in to the resolve function.
+ * @param {...*} [args] - Passed in to the resolve function.
  *
  * @returns {function(): Promise}
  */

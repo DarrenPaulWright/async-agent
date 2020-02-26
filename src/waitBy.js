@@ -6,9 +6,9 @@ import wait from './wait.js';
  * @function waitBy
  * @category Higher-order
  *
- * @arg {function} callback - Context and args are set to the same as those passed to the initially returned function.
+ * @param {Function} callback - Context and args are set to the same as those passed to the initially returned function.
  *
- * @returns {function(...[*]): Promise<unknown>}
+ * @returns {function(...[*]): Promise<*>}
  */
 export default function(callback) {
 	return function(...args) {

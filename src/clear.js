@@ -18,6 +18,6 @@
  *
  * @function clear
  *
- * @arg {Number} id - An id returned from defer or delay
+ * @param {number} id - An id returned from defer or delay
  */
 export default clearTimeout;
