@@ -21,6 +21,9 @@
 		"deps-patch": "npm run deps-commit && npm run patch",
 		"docs": "exec-each src/**/*.js --out docs/{basefile}.md jsdoc2md -- {path} -t node_modules/dmd-readable/docs.hbs --plugin dmd-readable && jsdoc2md index.js src/**/*.js > README.md -t node_modules/dmd-readable/overview.hbs --plugin node_modules/dmd-readable/overview-plugin.js"
 	},
+	"browserslist": [
+		"defaults"
+	],
 	"badges": {
 		"npm": {
 			"image": "https://img.shields.io/npm/v/{{name}}.svg",
