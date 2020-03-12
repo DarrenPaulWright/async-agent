@@ -69,7 +69,11 @@
 		"debounce",
 		"throttle"
 	],
-	"author": "Darren Paul Wright <Darren@DarrenPaulWright.com>",
+	"author": {
+		"name": "Darren Paul Wright",
+		"email": "Darren@DarrenPaulWright.com",
+		"url": "https://www.darrenpaulwright.com"
+	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/DarrenPaulWright/async-agent/issues"
