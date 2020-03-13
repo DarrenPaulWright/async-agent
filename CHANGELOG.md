@@ -4,6 +4,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [0.5.0] - 2020-03-13
+### Added
+- [fill](docs/fill.md)
+- [repeat](docs/repeat.md)
+- [until](docs/until.md)
+- [discard](docs/discard.md)
+- [each](docs/each.md)
+- [every](docs/every.md)
+- [filter](docs/filter.md)
+- [find](docs/find.md)
+- [findIndex](docs/findIndex.md)
+- [includes](docs/includes.md)
+- [indexOf](docs/indexOf.md)
+- [map](docs/map.md)
+- [reduce](docs/reduce.md)
+- [some](docs/some.md)
+
+###Security
+- Updating dependencies
+
+## [0.4.6] - 2020-01-15
+###Security
+- Preparing for future versions of node.
+
+## [0.4.5] - 2019-12-26
+###Security
+- Updating dependencies
+
 ## [0.4.4] - 2019-12-06
 ###Security
 - Updating dependencies
@@ -58,6 +86,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [clear](docs/clear.md)
 - [wait](docs/wait.md)
 
+[0.5.0]: https://github.com/DarrenPaulWright/async-agent/compare/v0.4.6...0.5.0
+[0.4.6]: https://github.com/DarrenPaulWright/async-agent/compare/v0.4.5...0.4.6
+[0.4.5]: https://github.com/DarrenPaulWright/async-agent/compare/v0.4.4...0.4.5
 [0.4.4]: https://github.com/DarrenPaulWright/async-agent/compare/v0.4.3...0.4.4
 [0.4.3]: https://github.com/DarrenPaulWright/async-agent/compare/v0.4.2...0.4.3
 [0.4.2]: https://github.com/DarrenPaulWright/async-agent/compare/v0.4.1...0.4.2

@@ -13,13 +13,13 @@
 
 <br><a name="resolveWith"></a>
 
-## resolveWith([args]) ⇒ <code>function</code>
+## resolveWith([arg]) ⇒ <code>function</code>
 > Returns a function that returns a Promise that resolves with provided args.
 
 
-| Param | Description |
-| --- | --- |
-| [args] | Passed in to the resolve function. |
+| Param | Type | Description |
+| --- | --- | --- |
+| [arg] | <code>\*</code> | Passed in to the resolve function. |
 
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg

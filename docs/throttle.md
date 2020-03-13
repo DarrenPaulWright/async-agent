@@ -21,13 +21,27 @@
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | callback | <code>function</code> |  | The context and args from the last call will be passed in. |
-| [duration] | <code>Number</code> | <code>0</code> |  |
-| [options] | <code>Object</code> | <code>{}</code> |  |
-| [options.leading] | <code>Boolean</code> | <code>true</code> | If true then the callback is called immediately the first time. |
-| [options.trailing] | <code>Boolean</code> | <code>true</code> | If false then the callback will only be called on the leading edge. |
+| [duration] | <code>number</code> | <code>0</code> | Time in milliseconds |
+| [options] | <code>object</code> | <code>{}</code> | - |
+| [options.leading] | <code>boolean</code> | <code>true</code> | If true then the callback is called immediately the first time. |
+| [options.trailing] | <code>boolean</code> | <code>true</code> | If false then the callback will only be called on the leading edge. |
 
 **Example**  
-``` javascriptimport { throttle } from 'async-agent';const throttled = throttle(() => {    console.log('1');});throttled();throttled();throttled();throttled();// => 1// => 1```
+``` javascript
+import { throttle } from 'async-agent';
+
+const throttled = throttle(() => {
+    console.log('1');
+});
+
+throttled();
+throttled();
+throttled();
+throttled();
+
+// => 1
+// => 1
+```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

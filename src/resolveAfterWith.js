@@ -8,10 +8,8 @@ import waitBy from './waitBy.js';
  * @category Higher-order
  *
  * @param {number} [duration=0] - Milliseconds
- * @param {...*} [args] - Passed in to the resolve function.
+ * @param {*} [arg] - Passed in to the resolve function.
  *
  * @returns {function(): Promise}
  */
-export default (duration, ...args) => waitBy(function(resolve) {
-	wait(duration).then(() => resolve(...args));
-});
+export default (duration, arg) => waitBy((resolve) => wait(duration).then(() => resolve(arg)));

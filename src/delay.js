@@ -22,4 +22,4 @@
  *
  * @returns {number} An id that can be used to clear the callback before it gets called.
  */
-export default (callback, duration) => setTimeout(callback, duration);
+export default (callback, duration = 0) => setTimeout(callback, duration);

@@ -9,8 +9,8 @@ describe('rejectWith', () => {
 
 		const thing = new Thing();
 
-		return thing.do('John', 'Doe').catch((name) => {
-			assert.equal(name, 'testString');
+		return thing.do('John', 'Doe').catch((error) => {
+			assert.equal(error, 'testString');
 		});
 	});
 });

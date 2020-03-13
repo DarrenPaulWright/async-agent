@@ -13,17 +13,28 @@
 
 <br><a name="defer"></a>
 
-## defer(callback) ⇒ <code>Number</code>
+## defer(callback) ⇒ <code>number</code>
 > Defers the calling of a callback until the current stack is complete.
 
-**Returns**: <code>Number</code> - An id that can be used to clear the callback before it gets called.  
+**Returns**: <code>number</code> - An id that can be used to clear the callback before it gets called.  
 
-| Param | Type |
-| --- | --- |
-| callback | <code>function</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| callback | <code>function</code> | The callback to defer execution of. |
 
 **Example**  
-``` javascriptimport { defer } from 'async-agent';defer(() => {    console.log('2');});console.log('1');// => 1// => 2```
+``` javascript
+import { defer } from 'async-agent';
+
+defer(() => {
+    console.log('2');
+});
+
+console.log('1');
+
+// => 1
+// => 2
+```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

@@ -12,8 +12,8 @@ describe('rejectBy', () => {
 
 		const thing = new Thing();
 
-		return thing.do('John', 'Doe').catch((name) => {
-			assert.equal(name, 'John Doe');
+		return thing.do('John', 'Doe').catch((error) => {
+			assert.equal(error, 'John Doe');
 		});
 	});
 });

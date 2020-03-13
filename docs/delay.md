@@ -13,18 +13,29 @@
 
 <br><a name="delay"></a>
 
-## delay(callback, [duration]) ⇒ <code>Number</code>
+## delay(callback, [duration]) ⇒ <code>number</code>
 > Delays the calling of a callback for a given amount of time.
 
-**Returns**: <code>Number</code> - An id that can be used to clear the callback before it gets called.  
+**Returns**: <code>number</code> - An id that can be used to clear the callback before it gets called.  
 
-| Param | Type | Default |
-| --- | --- | --- |
-| callback | <code>function</code> |  | 
-| [duration] | <code>Number</code> | <code>0</code> | 
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| callback | <code>function</code> |  | The function to delay execution of |
+| [duration] | <code>number</code> | <code>0</code> | Time in milliseconds |
 
 **Example**  
-``` javascriptimport { delay } from 'async-agent';delay(() => {    console.log('2');}, 1000);console.log('1');// => 1// (after 1000ms) => 2```
+``` javascript
+import { delay } from 'async-agent';
+
+delay(() => {
+    console.log('2');
+}, 1000);
+
+console.log('1');
+
+// => 1
+// (after 1000ms) => 2
+```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

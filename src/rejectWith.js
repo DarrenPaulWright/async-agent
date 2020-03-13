@@ -10,4 +10,4 @@ import rejectAfterWith from './rejectAfterWith.js';
  *
  * @returns {function(): Promise}
  */
-export default (...args) => rejectAfterWith(0, ...args)
+export default (...args) => rejectAfterWith(0, ...args);

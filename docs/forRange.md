@@ -13,19 +13,52 @@
 
 <br><a name="forRange"></a>
 
-## forRange(first, last, callback) ⇒ <code>Promise</code>
-> Calls an async callback for a range of numbers.
+## forRange(first, last, callback, [settings]) ⇒ <code>Promise</code>
+> Calls an async callback for each integer within a range.
 
-**Returns**: <code>Promise</code> - The promise is resolved after every callback is resolved or one is rejected.  
+**Returns**: <code>Promise</code> - The promise is resolved with true if iteration was cancelled by returning a truthy value in the callback, otherwise false.  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| first | <code>Integer</code> | The first number passed to the callback |
-| last | <code>Integer</code> | The last number passed to the callback |
-| callback | <code>function</code> | Must return a promise. If this promise is rejected then iteration stops and the returned promise is resolved. |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| first | <code>integer</code> |  | The first number passed to the callback. |
+| last | <code>integer</code> |  | The last number passed to the callback. |
+| callback | <code>function</code> |  | __Parameters:__ value.<br> __Context:__ same as that provided to the main function.<br> __Return:__ A truthy value to cancel further iterations.<br> _May return a Promise. Rejections are not caught._ |
+| [settings] | <code>object</code> |  | Optional settings object. |
+| [settings.delay] | <code>number</code> | <code>0</code> | Delay before calls in ms. Can be updated at any time to effect the delay before future calls. |
 
 **Example**  
-``` javascriptimport { forRange } from 'async-agent';const output = [];forRange(3, 10, (index) => new Promise((resolve) => {        output.push(index);        resolve();    })    .then(() => {        console.log(output);    }// => [3, 4, 5, 6, 7, 8, 9, 10]const outputRight = [];forRange(10, 3, (index) => new Promise((resolve, reject) => {        outputRight.push(index);        if (index === 7) {            reject();        }        else {            resolve();        }    })    .then(() => {        console.log(outputRight);    }// => [10, 9, 8, 7]```
+``` javascript
+import { forRange } from 'async-agent';
+
+const output = [];
+
+forRange(3, 10, (index) => new Promise((resolve) => {
+        output.push(index);
+        resolve();
+    })
+    .then(() => {
+        console.log(output);
+    }
+
+// => [3, 4, 5, 6, 7, 8, 9, 10]
+
+const outputRight = [];
+
+forRange(10, 3, (index) => new Promise((resolve, reject) => {
+        outputRight.push(index);
+        if (index === 7) {
+            reject();
+        }
+        else {
+            resolve();
+        }
+    })
+    .then(() => {
+        console.log(outputRight);
+    }
+
+// => [10, 9, 8, 7]
+```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

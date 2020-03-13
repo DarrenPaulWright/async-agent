@@ -19,7 +19,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| duration | <code>Number</code> | Milliseconds |
+| duration | <code>number</code> | Milliseconds |
 | callback | <code>function</code> | Context and args are set to the same as those passed to the initially returned function. |
 
 

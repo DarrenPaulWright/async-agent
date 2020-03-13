@@ -32,11 +32,11 @@ import delay from './delay.js';
  * @returns {Function} The debounced function. Has two methods: .clear() clears any current timeouts, and .flush() immediately calls any waiting callbacks.
  */
 export default (callback, duration = 0, options = {}) => {
-	let timeout;
-	let maxTimeout;
+	let timeout = 0;
+	let maxTimeout = 0;
 	let isLeading = false;
-	let context;
-	let lastArgs;
+	let self; // eslint-disable-line init-declarations
+	let lastArgs = [];
 
 	if (options.trailing === false) {
 		options.leading = true;
@@ -44,14 +44,14 @@ export default (callback, duration = 0, options = {}) => {
 
 	const call = () => {
 		isLeading = options.leading;
-		callback.apply(context, lastArgs);
+		callback.apply(self, lastArgs);
 		if (isLeading) {
 			timeout = delay(debounced.clear, duration);
 		}
 	};
 
 	const debounced = function(...args) {
-		context = this;
+		self = this;
 		lastArgs = args;
 
 		if (options.leading && !timeout) {

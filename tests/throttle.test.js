@@ -4,11 +4,11 @@ import { throttle, wait } from '../index.js';
 describe('throttle', () => {
 	it('should call the callback after other code is done if leading-false', () => {
 		let totalCalls = 0;
-		let context;
-		let theseArgs;
+		let self; // eslint-disable-line init-declarations
+		let theseArgs; // eslint-disable-line init-declarations
 		const throttled = throttle(function(...args) {
 			totalCalls++;
-			context = this;
+			self = this;
 			theseArgs = args;
 		}, 0, {
 			leading: false
@@ -21,31 +21,31 @@ describe('throttle', () => {
 		return wait(1)
 			.then(() => {
 				assert.is(totalCalls, 1);
-				assert.is(context, throttled);
+				assert.is(self, throttled);
 				assert.equal(theseArgs, ['test2', 'test3']);
 			});
 	});
 
 	it('should call the callback immediately if leading=true', () => {
 		let totalCalls = 0;
-		let context;
-		let theseArgs;
+		let self; // eslint-disable-line init-declarations
+		let theseArgs; // eslint-disable-line init-declarations
 		const throttled = throttle(function(...args) {
 			totalCalls++;
-			context = this;
+			self = this;
 			theseArgs = args;
 		});
 
 		throttled.call(throttled, 'test2', 'test3');
 
 		assert.is(totalCalls, 1);
-		assert.is(context, throttled);
+		assert.is(self, throttled);
 		assert.equal(theseArgs, ['test2', 'test3']);
 
 		return wait(1)
 			.then(() => {
 				assert.is(totalCalls, 1);
-				assert.is(context, throttled);
+				assert.is(self, throttled);
 				assert.equal(theseArgs, ['test2', 'test3']);
 			});
 	});

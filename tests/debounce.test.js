@@ -4,11 +4,11 @@ import { debounce, wait } from '../index.js';
 describe('debounce', () => {
 	it('should call the callback after other code is done', () => {
 		let testVar = 0;
-		let context;
-		let theseArgs;
+		let self; // eslint-disable-line init-declarations
+		let theseArgs; // eslint-disable-line init-declarations
 		const debounced = debounce(function(...args) {
 			testVar++;
-			context = this;
+			self = this;
 			theseArgs = args;
 		});
 
@@ -19,18 +19,18 @@ describe('debounce', () => {
 		return wait(1)
 			.then(() => {
 				assert.is(testVar, 1);
-				assert.is(context, debounced);
+				assert.is(self, debounced);
 				assert.equal(theseArgs, ['test2', 'test3']);
 			});
 	});
 
 	it('should call the callback immediately if leading=true', () => {
 		let testVar = 0;
-		let context;
-		let theseArgs;
+		let self; // eslint-disable-line init-declarations
+		let theseArgs; // eslint-disable-line init-declarations
 		const debounced = debounce(function(...args) {
 			testVar++;
-			context = this;
+			self = this;
 			theseArgs = args;
 		}, 0, {
 			leading: true
@@ -39,13 +39,13 @@ describe('debounce', () => {
 		debounced.call(debounced, 'test2', 'test3');
 
 		assert.is(testVar, 1);
-		assert.is(context, debounced);
+		assert.is(self, debounced);
 		assert.equal(theseArgs, ['test2', 'test3']);
 
 		return wait(1)
 			.then(() => {
 				assert.is(testVar, 1);
-				assert.is(context, debounced);
+				assert.is(self, debounced);
 				assert.equal(theseArgs, ['test2', 'test3']);
 			});
 	});

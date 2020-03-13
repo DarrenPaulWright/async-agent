@@ -1,13 +1,11 @@
-import resolveAfterWith from './resolveAfterWith.js';
-
 /**
  * Returns a function that returns a Promise that resolves with provided args.
  *
  * @function resolveWith
  * @category Higher-order
  *
- * @param {...*} [args] - Passed in to the resolve function.
+ * @param {*} [arg] - Passed in to the resolve function.
  *
  * @returns {function(): Promise}
  */
-export default (...args) => resolveAfterWith(0, ...args);
+export default (arg) => () => Promise.resolve(arg);

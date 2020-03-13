@@ -13,14 +13,14 @@
 
 <br><a name="resolveAfterWith"></a>
 
-## resolveAfterWith([duration], [args]) ⇒ <code>function</code>
+## resolveAfterWith([duration], [arg]) ⇒ <code>function</code>
 > Returns a function that returns a Promise that resolves with provided args after a delay.
 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [duration] | <code>Number</code> | <code>0</code> | Milliseconds |
-| [args] | <code>\*</code> |  | Passed in to the resolve function. |
+| [duration] | <code>number</code> | <code>0</code> | Milliseconds |
+| [arg] | <code>\*</code> |  | Passed in to the resolve function. |
 
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg

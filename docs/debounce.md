@@ -21,14 +21,27 @@
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | callback | <code>function</code> |  | The context and args from the last call will be passed in. |
-| [duration] | <code>Number</code> | <code>0</code> |  |
-| [options] | <code>Object</code> | <code>{}</code> |  |
-| [options.leading] | <code>Boolean</code> | <code>false</code> | If true then the callback is called immediately the first time. |
-| [options.maxWait] | <code>Boolean</code> |  | Max time to wait before flushing. |
-| [options.trailing] | <code>Boolean</code> | <code>true</code> | If false then the callback will only be called on the leading edge. |
+| [duration] | <code>number</code> | <code>0</code> | Time in milliseconds. |
+| [options] | <code>object</code> | <code>{}</code> | - |
+| [options.leading] | <code>boolean</code> | <code>false</code> | If true then the callback is called immediately the first time. |
+| [options.maxWait] | <code>boolean</code> |  | Max time to wait before flushing. |
+| [options.trailing] | <code>boolean</code> | <code>true</code> | If false then the callback will only be called on the leading edge. |
 
 **Example**  
-``` javascriptimport { debounce } from 'async-agent';const debounced = debounce(() => {    console.log('1');});debounced();debounced();debounced();debounced();// => 1```
+``` javascript
+import { debounce } from 'async-agent';
+
+const debounced = debounce(() => {
+    console.log('1');
+});
+
+debounced();
+debounced();
+debounced();
+debounced();
+
+// => 1
+```
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg
 [npm-url]: https://npmjs.com/package/async-agent

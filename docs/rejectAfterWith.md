@@ -19,7 +19,7 @@
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [duration] | <code>Number</code> | <code>0</code> | Milliseconds |
+| [duration] | <code>number</code> | <code>0</code> | Milliseconds |
 | [args] | <code>\*</code> |  | Passed in to the reject function. |
 
 

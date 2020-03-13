@@ -13,8 +13,8 @@ describe('resolveAfterBy', () => {
 		const start = new Date();
 		const thing = new Thing();
 
-		return thing.do('John', 'Doe').catch((name) => {
-			assert.equal(name, 'John Doe');
+		return thing.do('John', 'Doe').catch((error) => {
+			assert.equal(error, 'John Doe');
 			assert.atLeast(new Date() - start, 20);
 		});
 	});

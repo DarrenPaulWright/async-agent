@@ -1,3 +1,4 @@
+import { isFunction } from 'type-enforcer';
 import delay from './delay.js';
 
 /**
@@ -25,7 +26,7 @@ import delay from './delay.js';
  * @returns {Promise}
  */
 export default (duration = 0) => new Promise((resolve, reject) => {
-	if (typeof duration === 'function') {
+	if (isFunction(duration)) {
 		duration(resolve, reject);
 	}
 	else if (duration === 0) {
