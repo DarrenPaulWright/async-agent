@@ -59,7 +59,7 @@ export default (test, settings) => {
 				}, delaySettings)
 					.then(() => {
 						assert.atLeast(new Date() - start, 5);
-						assert.atMost(new Date() - start, 10);
+						assert.atMost(new Date() - start, 40);
 					});
 			});
 		}
