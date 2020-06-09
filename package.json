@@ -1,6 +1,6 @@
 {
 	"name": "async-agent",
-	"version": "0.5.3",
+	"version": "0.5.4",
 	"description": "A javascript library of async functions",
 	"type": "module",
 	"main": "index.js",
