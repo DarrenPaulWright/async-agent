@@ -90,13 +90,13 @@
 	},
 	"homepage": "https://github.com/DarrenPaulWright/async-agent#readme",
 	"dependencies": {
-		"type-enforcer": "^1.1.1"
+		"type-enforcer": "^1.1.4"
 	},
 	"devDependencies": {
-		"dmd-readable": "^1.2.1",
+		"dmd-readable": "^1.2.2",
 		"exec-each": "0.0.3",
-		"jsdoc-to-markdown": "^5.0.3",
-		"karma-webpack-bundle": "^0.4.1",
+		"jsdoc-to-markdown": "^6.0.1",
+		"karma-webpack-bundle": "^0.4.3",
 		"npm-run-all": "^4.1.5"
 	}
 }
