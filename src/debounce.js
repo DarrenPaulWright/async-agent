@@ -26,8 +26,8 @@ import delay from './delay.js';
  * @param {number} [duration=0] - Time in milliseconds.
  * @param {object} [options={}] -
  * @param {boolean} [options.leading=false] - If true then the callback is called immediately the first time.
- * @param {boolean} [options.maxWait] - Max time to wait before flushing.
  * @param {boolean} [options.trailing=true] - If false then the callback will only be called on the leading edge.
+ * @param {number.int} [options.maxWait] - Max time (ms) to wait before flushing.
  *
  * @returns {Function} The debounced function. Has two methods: .clear() clears any current timeouts, and .flush() immediately calls any waiting callbacks.
  */
