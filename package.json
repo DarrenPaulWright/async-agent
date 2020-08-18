@@ -3,72 +3,6 @@
 	"version": "0.5.4",
 	"description": "A javascript library of async functions",
 	"type": "module",
-	"main": "index.js",
-	"files": [
-		"/src"
-	],
-	"sideEffects": false,
-	"scripts": {
-		"test": "karma start --single-run",
-		"test-watch": "karma start",
-		"bench": "karma start karma.bench.conf.js",
-		"preversion": "npm test && npm run docs && git add --all && git diff --staged --quiet || git commit -m \"Updating docs\"",
-		"postversion": "npm publish",
-		"postpublish": "git push --follow-tags",
-		"pre-clean": "rm -rf node_modules && del /f package-lock.json",
-		"clean": "npm run pre-clean && npm install",
-		"update": "ncu -u && npm install",
-		"update-clean": "npm run pre-clean && npm run update",
-		"update-commit": "npm run update && npm test && git add --all && git diff --staged --quiet || git commit -m \"Updating dependencies\"",
-		"update-patch": "npm run update-commit && npm version patch",
-		"docs:readme": "jsdoc2md ./index.js src/**/*.js > README.md -t node_modules/dmd-readable/overview.hbs --plugin dmd-readable/overview-plugin.js",
-		"docs:main": "exec-each src/*.js --out docs/{basefile}.md jsdoc2md -- {path} -t node_modules/dmd-readable/docs.hbs --plugin dmd-readable",
-		"docs:iterators": "exec-each src/iterators/*.js --out docs/{basefile}.md jsdoc2md -- {path} -t node_modules/dmd-readable/docs.hbs --plugin dmd-readable",
-		"docs:repeaters": "exec-each src/repeaters/*.js --out docs/{basefile}.md jsdoc2md -- {path} -t node_modules/dmd-readable/docs.hbs --plugin dmd-readable",
-		"docs": "run-p docs:*"
-	},
-	"browserslist": [
-		"defaults",
-		"maintained node versions"
-	],
-	"badges": {
-		"npm": {
-			"image": "https://img.shields.io/npm/v/{{name}}.svg",
-			"url": "https://npmjs.com/package/{{name}}"
-		},
-		"build": {
-			"base": "https://travis-ci.org/DarrenPaulWright/",
-			"image": "{{name}}.svg?branch=master",
-			"url": "{{name}}"
-		},
-		"coverage": {
-			"base": "https://coveralls.io/",
-			"image": "repos/github/DarrenPaulWright/{{name}}/badge.svg?branch=master",
-			"url": "github/DarrenPaulWright/{{name}}?branch=master"
-		},
-		"deps": {
-			"image": "https://david-dm.org/darrenpaulwright/{{name}}.svg",
-			"url": "https://david-dm.org/darrenpaulwright/{{name}}"
-		},
-		"size": {
-			"base": "https://packagephobia.now.sh/",
-			"image": "badge?p={{name}}",
-			"url": "result?p={{name}}"
-		},
-		"vulnerabilities": {
-			"base": "https://snyk.io/test/github/DarrenPaulWright/{{name}}",
-			"image": "/badge.svg?targetFile=package.json",
-			"url": "?targetFile=package.json"
-		},
-		"license": {
-			"image": "https://img.shields.io/github/license/DarrenPaulWright/{{name}}.svg",
-			"url": "https://npmjs.com/package/{{name}}/LICENSE.md"
-		}
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/DarrenPaulWright/async-agent.git"
-	},
 	"keywords": [
 		"defer",
 		"delay",
@@ -79,16 +13,82 @@
 		"debounce",
 		"throttle"
 	],
+	"license": "MIT",
 	"author": {
 		"name": "Darren Paul Wright",
 		"email": "Darren@DarrenPaulWright.com",
 		"url": "https://www.darrenpaulwright.com"
 	},
-	"license": "MIT",
+	"homepage": "https://github.com/DarrenPaulWright/async-agent#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DarrenPaulWright/async-agent.git"
+	},
 	"bugs": {
 		"url": "https://github.com/DarrenPaulWright/async-agent/issues"
 	},
-	"homepage": "https://github.com/DarrenPaulWright/async-agent#readme",
+	"main": "index.js",
+	"files": [
+		"/src"
+	],
+	"sideEffects": false,
+	"browserslist": [
+		"defaults",
+		"maintained node versions"
+	],
+	"badges": {
+		"npm": {
+			"image": "https://img.shields.io/npm/v/async-agent.svg",
+			"url": "https://npmjs.com/package/async-agent"
+		},
+		"build": {
+			"base": "https://travis-ci.org/DarrenPaulWright/",
+			"image": "async-agent.svg?branch=master",
+			"url": "async-agent"
+		},
+		"coverage": {
+			"base": "https://coveralls.io/",
+			"image": "repos/github/DarrenPaulWright/async-agent/badge.svg?branch=master",
+			"url": "github/DarrenPaulWright/async-agent?branch=master"
+		},
+		"deps": {
+			"image": "https://david-dm.org/DarrenPaulWright/async-agent.svg",
+			"url": "https://david-dm.org/DarrenPaulWright/async-agent"
+		},
+		"size": {
+			"base": "https://packagephobia.now.sh/",
+			"image": "badge?p=async-agent",
+			"url": "result?p=async-agent"
+		},
+		"vulnerabilities": {
+			"base": "https://snyk.io/test/github/DarrenPaulWright/async-agent",
+			"image": "/badge.svg?targetFile=package.json",
+			"url": "?targetFile=package.json"
+		},
+		"license": {
+			"image": "https://img.shields.io/github/license/DarrenPaulWright/async-agent.svg",
+			"url": "https://npmjs.com/package/async-agent/LICENSE.md"
+		}
+	},
+	"scripts": {
+		"test": "karma start --single-run",
+		"test-watch": "karma start",
+		"bench": "karma start karma.bench.conf.js",
+		"preversion": "npm test && npm run docs && git add --all && git diff HEAD --quiet || git commit -m \"Updating docs\"",
+		"postversion": "npm publish",
+		"postpublish": "git push --follow-tags",
+		"pre-clean": "rm -rf node_modules && del /f package-lock.json",
+		"clean": "npm run pre-clean && npm install && npm audit fix",
+		"update": "ncu -u && git diff --quiet || npm install && npm audit fix",
+		"update-clean": "npm run pre-clean && npm run update",
+		"update-commit": "npm run update && npm test && git add --all && git diff HEAD --quiet || git commit -m \"Updating dependencies\"",
+		"update-patch": "npm run update && npm test && git add --all && git diff HEAD --quiet || git commit -m \"Updating dependencies\" && npm version patch",
+		"docs:readme": "jsdoc2md ./index.js src/**/*.js > README.md -t node_modules/dmd-readable/overview.hbs --plugin dmd-readable/overview-plugin.js",
+		"docs:main": "exec-each src/*.js --out docs/{basefile}.md jsdoc2md -- {path} -t node_modules/dmd-readable/docs.hbs --plugin dmd-readable",
+		"docs:iterators": "exec-each src/iterators/*.js --out docs/{basefile}.md jsdoc2md -- {path} -t node_modules/dmd-readable/docs.hbs --plugin dmd-readable",
+		"docs:repeaters": "exec-each src/repeaters/*.js --out docs/{basefile}.md jsdoc2md -- {path} -t node_modules/dmd-readable/docs.hbs --plugin dmd-readable",
+		"docs": "run-p docs:*"
+	},
 	"dependencies": {
 		"type-enforcer": "^1.1.4"
 	},
