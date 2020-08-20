@@ -7,7 +7,7 @@ import waitBy from './waitBy.js';
  * @function rejectAfterBy
  * @category Higher-order
  *
- * @param {number} duration - Milliseconds
+ * @param {number} duration - Milliseconds.
  * @param {Function} callback - Context and args are set to the same as those passed to the initially returned function.
  *
  * @returns {function(): Promise}

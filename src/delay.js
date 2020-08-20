@@ -17,8 +17,8 @@
  *
  * @function delay
  *
- * @param {Function} callback - The function to delay execution of
- * @param {number} [duration=0] - Time in milliseconds
+ * @param {Function} callback - The function to delay execution of.
+ * @param {number} [duration=0] - Time in milliseconds.
  *
  * @returns {number} An id that can be used to clear the callback before it gets called.
  */

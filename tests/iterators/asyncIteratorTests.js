@@ -9,7 +9,7 @@ const defaultCallback = () => undefined;
  * @private
  *
  * @param {Function} test - The function to test.
- * @param {object} settings - Settings
+ * @param {object} settings - Settings.
  */
 export function asyncIteratorTests(test, settings) {
 	const {
@@ -195,7 +195,7 @@ export function asyncIteratorTests(test, settings) {
  * @private
  *
  * @param {Function} test - The function to test.
- * @param {object} settings - Settings
+ * @param {object} settings - Settings.
  */
 export function asyncIndexTests(test, settings) {
 	const {

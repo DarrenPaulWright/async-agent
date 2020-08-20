@@ -48,10 +48,7 @@ import resolveAfterBy from '../resolveAfterBy.js';
  *
  * @param {integer} first - The first number passed to the callback.
  * @param {integer} last - The last number passed to the callback.
- * @param {Function} callback - __Parameters:__ value.<br>
- * __Context:__ same as that provided to the main function.<br>
- * __Return:__ A truthy value to cancel further iterations.<br>
- * _May return a Promise. Rejections are not caught._
+ * @param {Function} callback - __Parameters:__ value.<br>__Context:__ same as that provided to the main function.<br>__Return:__ A truthy value to cancel further iterations.<br>_May return a Promise. Rejections are not caught_.
  * @param {object} [settings] - Optional settings object.
  * @param {number} [settings.delay=0] - Delay before calls in ms. Can be updated at any time to effect the delay before future calls.
  *

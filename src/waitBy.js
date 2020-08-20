@@ -8,7 +8,7 @@ import wait from './wait.js';
  *
  * @param {Function} callback - Context and args are set to the same as those passed to the initially returned function.
  *
- * @returns {function(...[*]): Promise<*>}
+ * @returns {function(*): Promise<*>}
  */
 export default function(callback) {
 	return function(...args) {

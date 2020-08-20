@@ -193,7 +193,7 @@ describe('debounce', () => {
 		const debounced = debounce(() => {
 			testVar++;
 		}, 10, {
-			maxWait: 15
+			maxWait: 30
 		});
 
 		debounced();
@@ -203,18 +203,18 @@ describe('debounce', () => {
 
 		assert.is(testVar, 0);
 
-		return wait(3)
+		return wait(6)
 			.then(() => {
 				debounced();
 				debounced();
 				assert.is(testVar, 0);
-				return wait(3);
+				return wait(6);
 			})
 			.then(() => {
 				debounced();
 				debounced();
 				assert.is(testVar, 0);
-				return wait(9);
+				return wait(18);
 			})
 			.then(() => {
 				assert.is(testVar, 1);

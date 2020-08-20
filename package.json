@@ -90,13 +90,13 @@
 		"docs": "run-p docs:*"
 	},
 	"dependencies": {
-		"type-enforcer": "^1.1.4"
+		"type-enforcer": "^1.2.1"
 	},
 	"devDependencies": {
 		"dmd-readable": "^1.2.2",
 		"exec-each": "0.0.3",
 		"jsdoc-to-markdown": "^6.0.1",
-		"karma-webpack-bundle": "^0.4.3",
+		"karma-webpack-bundle": "^0.5.3",
 		"npm-run-all": "^4.1.5"
 	}
 }

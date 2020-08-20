@@ -7,7 +7,7 @@ import waitBy from './waitBy.js';
  * @function resolveAfterWith
  * @category Higher-order
  *
- * @param {number} [duration=0] - Milliseconds
+ * @param {number} [duration=0] - Milliseconds.
  * @param {*} [arg] - Passed in to the resolve function.
  *
  * @returns {function(): Promise}

@@ -23,8 +23,8 @@ import debounce from './debounce.js';
  * @function throttle
  *
  * @param {Function} callback - The context and args from the last call will be passed in.
- * @param {number} [duration=0] - Time in milliseconds
- * @param {object} [options={}] -
+ * @param {number} [duration=0] - Time in milliseconds.
+ * @param {object} [options={}] - Options.
  * @param {boolean} [options.leading=true] - If true then the callback is called immediately the first time.
  * @param {boolean} [options.trailing=true] - If false then the callback will only be called on the leading edge.
  *
