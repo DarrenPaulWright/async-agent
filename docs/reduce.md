@@ -21,7 +21,7 @@
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | array | <code>Array</code> |  | An array to iterate over. |
-| callback | <code>function</code> |  | __Parameters:__ result, element, index, and array.<br> __Context:__ same as that provided to the main function.<br> __Return:__ A value to pass into the next call of the callback as the first parameter.<br> _May return a Promise. Rejections are not caught and any work done up to that point will be lost._ |
+| callback | <code>function</code> |  | __Parameters:__ result, element, index, and array.<br>__Context:__ same as that provided to the main function.<br>__Return:__ A value to pass into the next call of the callback as the first parameter.<br>_May return a Promise. Rejections are not caught and any work done up to that point will be lost_. |
 | initialValue | <code>\*</code> |  | A value to use as the first argument to the first call of the callback. If no initialValue is supplied, the first element in the array will be used and skipped. |
 | [settings] | <code>object</code> |  | Optional settings object. |
 | [settings.down] | <code>boolean</code> | <code>false</code> | Decrement the index on each iteration from highest to lowest. |
@@ -34,8 +34,8 @@
 [build-url]: https://travis-ci.org/DarrenPaulWright/async-agent
 [coverage]: https://coveralls.io/repos/github/DarrenPaulWright/async-agent/badge.svg?branch&#x3D;master
 [coverage-url]: https://coveralls.io/github/DarrenPaulWright/async-agent?branch&#x3D;master
-[deps]: https://david-dm.org/darrenpaulwright/async-agent.svg
-[deps-url]: https://david-dm.org/darrenpaulwright/async-agent
+[deps]: https://david-dm.org/DarrenPaulWright/async-agent.svg
+[deps-url]: https://david-dm.org/DarrenPaulWright/async-agent
 [size]: https://packagephobia.now.sh/badge?p&#x3D;async-agent
 [size-url]: https://packagephobia.now.sh/result?p&#x3D;async-agent
 [vulnerabilities]: https://snyk.io/test/github/DarrenPaulWright/async-agent/badge.svg?targetFile&#x3D;package.json

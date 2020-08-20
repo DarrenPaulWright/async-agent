@@ -20,8 +20,8 @@
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| callback | <code>function</code> |  | The function to delay execution of |
-| [duration] | <code>number</code> | <code>0</code> | Time in milliseconds |
+| callback | <code>function</code> |  | The function to delay execution of. |
+| [duration] | <code>number</code> | <code>0</code> | Time in milliseconds. |
 
 **Example**  
 ``` javascript
@@ -43,8 +43,8 @@ console.log('1');
 [build-url]: https://travis-ci.org/DarrenPaulWright/async-agent
 [coverage]: https://coveralls.io/repos/github/DarrenPaulWright/async-agent/badge.svg?branch&#x3D;master
 [coverage-url]: https://coveralls.io/github/DarrenPaulWright/async-agent?branch&#x3D;master
-[deps]: https://david-dm.org/darrenpaulwright/async-agent.svg
-[deps-url]: https://david-dm.org/darrenpaulwright/async-agent
+[deps]: https://david-dm.org/DarrenPaulWright/async-agent.svg
+[deps-url]: https://david-dm.org/DarrenPaulWright/async-agent
 [size]: https://packagephobia.now.sh/badge?p&#x3D;async-agent
 [size-url]: https://packagephobia.now.sh/result?p&#x3D;async-agent
 [vulnerabilities]: https://snyk.io/test/github/DarrenPaulWright/async-agent/badge.svg?targetFile&#x3D;package.json

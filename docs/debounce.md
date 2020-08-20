@@ -22,10 +22,10 @@
 | --- | --- | --- | --- |
 | callback | <code>function</code> |  | The context and args from the last call will be passed in. |
 | [duration] | <code>number</code> | <code>0</code> | Time in milliseconds. |
-| [options] | <code>object</code> | <code>{}</code> | - |
+| [options] | <code>object</code> | <code>{}</code> | Options. |
 | [options.leading] | <code>boolean</code> | <code>false</code> | If true then the callback is called immediately the first time. |
-| [options.maxWait] | <code>boolean</code> |  | Max time to wait before flushing. |
 | [options.trailing] | <code>boolean</code> | <code>true</code> | If false then the callback will only be called on the leading edge. |
+| [options.maxWait] | <code>number.int</code> |  | Max time (ms) to wait before flushing. |
 
 **Example**  
 ``` javascript
@@ -49,8 +49,8 @@ debounced();
 [build-url]: https://travis-ci.org/DarrenPaulWright/async-agent
 [coverage]: https://coveralls.io/repos/github/DarrenPaulWright/async-agent/badge.svg?branch&#x3D;master
 [coverage-url]: https://coveralls.io/github/DarrenPaulWright/async-agent?branch&#x3D;master
-[deps]: https://david-dm.org/darrenpaulwright/async-agent.svg
-[deps-url]: https://david-dm.org/darrenpaulwright/async-agent
+[deps]: https://david-dm.org/DarrenPaulWright/async-agent.svg
+[deps-url]: https://david-dm.org/DarrenPaulWright/async-agent
 [size]: https://packagephobia.now.sh/badge?p&#x3D;async-agent
 [size-url]: https://packagephobia.now.sh/result?p&#x3D;async-agent
 [vulnerabilities]: https://snyk.io/test/github/DarrenPaulWright/async-agent/badge.svg?targetFile&#x3D;package.json

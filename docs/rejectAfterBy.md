@@ -19,7 +19,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| duration | <code>number</code> | Milliseconds |
+| duration | <code>number</code> | Milliseconds. |
 | callback | <code>function</code> | Context and args are set to the same as those passed to the initially returned function. |
 
 
@@ -29,8 +29,8 @@
 [build-url]: https://travis-ci.org/DarrenPaulWright/async-agent
 [coverage]: https://coveralls.io/repos/github/DarrenPaulWright/async-agent/badge.svg?branch&#x3D;master
 [coverage-url]: https://coveralls.io/github/DarrenPaulWright/async-agent?branch&#x3D;master
-[deps]: https://david-dm.org/darrenpaulwright/async-agent.svg
-[deps-url]: https://david-dm.org/darrenpaulwright/async-agent
+[deps]: https://david-dm.org/DarrenPaulWright/async-agent.svg
+[deps-url]: https://david-dm.org/DarrenPaulWright/async-agent
 [size]: https://packagephobia.now.sh/badge?p&#x3D;async-agent
 [size-url]: https://packagephobia.now.sh/result?p&#x3D;async-agent
 [vulnerabilities]: https://snyk.io/test/github/DarrenPaulWright/async-agent/badge.svg?targetFile&#x3D;package.json
