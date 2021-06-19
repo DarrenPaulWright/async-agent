@@ -1,6 +1,6 @@
 import { assert } from 'type-enforcer';
 import { some } from '../../index.js';
-import { asyncIteratorTests } from './asyncIteratorTests.js';
+import { asyncIteratorTests } from '../helpers/asyncIteratorTests.js';
 
 describe('some', () => {
 	const array = [1, 2, 3, 4, 5];

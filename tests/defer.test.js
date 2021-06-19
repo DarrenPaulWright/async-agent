@@ -1,6 +1,7 @@
 import { assert } from 'type-enforcer';
 import { clear, defer } from '../index.js';
 
+/* eslint-disable unicorn/prevent-abbreviations */
 describe('defer', () => {
 	it('should call the callback after other code is done', (done) => {
 		let testVar = 0;

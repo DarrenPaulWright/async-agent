@@ -1,6 +1,6 @@
 import { assert } from 'type-enforcer';
 import { every } from '../../index.js';
-import { asyncIteratorTests } from './asyncIteratorTests.js';
+import { asyncIteratorTests } from '../helpers/asyncIteratorTests.js';
 
 describe('every', () => {
 	const array = [1, 2, 3, 4, 5];

@@ -1,6 +1,6 @@
 import { assert } from 'type-enforcer';
 import { fill } from '../../index.js';
-import asyncRepeaterTests from '../repeaters/asyncRepeaterTests.js';
+import asyncRepeaterTests from '../helpers/asyncRepeaterTests.js';
 
 describe('fill', () => {
 	it('should fill an array with the index by default', () => {

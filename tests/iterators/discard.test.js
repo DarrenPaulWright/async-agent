@@ -1,5 +1,5 @@
 import { discard } from '../../index.js';
-import { asyncIteratorTests } from './asyncIteratorTests.js';
+import { asyncIteratorTests } from '../helpers/asyncIteratorTests.js';
 
 describe('discard', () => {
 	const array = [1, 2, 3, 4, 5];

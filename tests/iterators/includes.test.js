@@ -1,5 +1,5 @@
 import { includes } from '../../index.js';
-import { asyncIndexTests } from './asyncIteratorTests.js';
+import { asyncIndexTests } from '../helpers/asyncIteratorTests.js';
 
 describe('includes', () => {
 	const input = [

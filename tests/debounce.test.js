@@ -1,6 +1,7 @@
 import { assert } from 'type-enforcer';
 import { debounce, wait } from '../index.js';
 
+/* eslint-disable unicorn/prevent-abbreviations */
 describe('debounce', () => {
 	it('should call the callback after other code is done', () => {
 		let testVar = 0;

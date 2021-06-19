@@ -1,5 +1,5 @@
 import { repeat } from '../../index.js';
-import asyncRepeaterTests from './asyncRepeaterTests.js';
+import asyncRepeaterTests from '../helpers/asyncRepeaterTests.js';
 
 describe('repeat', () => {
 	describe('(no settings)', () => {

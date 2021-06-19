@@ -1,5 +1,5 @@
 import { indexOf } from '../../index.js';
-import { asyncIndexTests } from './asyncIteratorTests.js';
+import { asyncIndexTests } from '../helpers/asyncIteratorTests.js';
 
 describe('indexOf', () => {
 	const input = [

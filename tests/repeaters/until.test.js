@@ -1,5 +1,5 @@
 import { until } from '../../index.js';
-import asyncRepeaterTests from './asyncRepeaterTests.js';
+import asyncRepeaterTests from '../helpers/asyncRepeaterTests.js';
 
 describe('until', () => {
 	describe('(no settings)', () => {

@@ -1,5 +1,5 @@
 import { findIndex } from '../../index.js';
-import { asyncIteratorTests } from './asyncIteratorTests.js';
+import { asyncIteratorTests } from '../helpers/asyncIteratorTests.js';
 
 describe('findIndex', () => {
 	const input = [

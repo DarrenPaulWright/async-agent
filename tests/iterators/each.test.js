@@ -1,7 +1,8 @@
 import { assert } from 'type-enforcer';
 import { each } from '../../index.js';
-import { asyncIteratorTests } from './asyncIteratorTests.js';
+import { asyncIteratorTests } from '../helpers/asyncIteratorTests.js';
 
+/* eslint-disable unicorn/prevent-abbreviations */
 describe('each', () => {
 	const array = [1, 2, 3, 4, 5];
 
