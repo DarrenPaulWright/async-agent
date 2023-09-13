@@ -8,7 +8,7 @@ import some from './some.js';
  * @category Iterator
  *
  * @param {Array} array - An array to iterate over.
- * @param {*} value - The value to find in array.
+ * @param {unknown} value - The value to find in array.
  * @param {object} [settings] - Optional settings object.
  * @param {boolean} [settings.down=false] - Decrement the index on each iteration from highest to lowest.
  * @param {number} [settings.delay=0] - Delay before calls in ms. Can be updated at any time to effect the delay before future calls.

@@ -8,7 +8,7 @@ import waitBy from './waitBy.js';
  * @category Higher-order
  *
  * @param {number} [duration=0] - Milliseconds.
- * @param {*} [arg] - Passed in to the resolve function.
+ * @param {unknown} [arg] - Passed in to the resolve function.
  *
  * @returns {function(): Promise}
  */

@@ -20,7 +20,7 @@
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | [duration] | <code>number</code> | <code>0</code> | Milliseconds. |
-| [arg] | <code>\*</code> |  | Passed in to the resolve function. |
+| [arg] | <code>unknown</code> |  | Passed in to the resolve function. |
 
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg

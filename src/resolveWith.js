@@ -4,7 +4,7 @@
  * @function resolveWith
  * @category Higher-order
  *
- * @param {*} [arg] - Passed in to the resolve function.
+ * @param {unknown} [arg] - Passed in to the resolve function.
  *
  * @returns {function(): Promise}
  */

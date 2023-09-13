@@ -6,7 +6,7 @@ import rejectAfterWith from './rejectAfterWith.js';
  * @function resolveWith
  * @category Higher-order
  *
- * @param {...*} [args] - Passed in to the reject function.
+ * @param {...unknown} [args] - Passed in to the reject function.
  *
  * @returns {function(): Promise}
  */

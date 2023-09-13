@@ -21,7 +21,7 @@
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | array | <code>Array</code> |  | An array to iterate over. |
-| value | <code>\*</code> |  | The value to find in array. |
+| value | <code>unknown</code> |  | The value to find in array. |
 | [settings] | <code>object</code> |  | Optional settings object. |
 | [settings.down] | <code>boolean</code> | <code>false</code> | Decrement the index on each iteration from highest to lowest. |
 | [settings.delay] | <code>number</code> | <code>0</code> | Delay before calls in ms. Can be updated at any time to effect the delay before future calls. |

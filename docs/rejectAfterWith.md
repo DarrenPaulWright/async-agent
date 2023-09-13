@@ -20,7 +20,7 @@
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | [duration] | <code>number</code> | <code>0</code> | Milliseconds. |
-| [args] | <code>\*</code> |  | Passed in to the reject function. |
+| [args] | <code>unknown</code> |  | Passed in to the reject function. |
 
 
 [npm]: https://img.shields.io/npm/v/async-agent.svg

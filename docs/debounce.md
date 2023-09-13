@@ -25,7 +25,7 @@
 | [options] | <code>object</code> | <code>{}</code> | Options. |
 | [options.leading] | <code>boolean</code> | <code>false</code> | If true then the callback is called immediately the first time. |
 | [options.trailing] | <code>boolean</code> | <code>true</code> | If false then the callback will only be called on the leading edge. |
-| [options.maxWait] | <code>number.int</code> |  | Max time (ms) to wait before flushing. |
+| [options.maxWait] | <code>number</code> |  | Max time (ms) to wait before flushing. |
 
 **Example**  
 ``` javascript

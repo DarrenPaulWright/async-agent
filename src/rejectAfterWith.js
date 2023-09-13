@@ -7,7 +7,7 @@ import wait from './wait.js';
  * @category Higher-order
  *
  * @param {number} [duration=0] - Milliseconds.
- * @param {*} [args] - Passed in to the reject function.
+ * @param {unknown} [args] - Passed in to the reject function.
  *
  * @returns {function(): Promise}
  */
