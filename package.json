@@ -91,7 +91,7 @@
 		"docs": "run-p docs:*"
 	},
 	"dependencies": {
-		"type-enforcer": "^1.2.5"
+		"type-enforcer": "^1.2.6"
 	},
 	"devDependencies": {
 		"dmd-readable": "^1.2.4",
