@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 import { rejectBy } from '../index.js';
 
 describe('rejectBy', () => {
@@ -6,7 +6,7 @@ describe('rejectBy', () => {
 		const Thing = function() {
 			this.do = rejectBy(function(first, last) {
 				assert.is(this, thing);
-				return `${first} ${last}`;
+				return `${ first } ${ last }`;
 			});
 		};
 

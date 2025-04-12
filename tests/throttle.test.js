@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 import { throttle, wait } from '../index.js';
 
 describe('throttle', () => {

@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 import { waitBy } from '../index.js';
 
 describe('waitBy', () => {
@@ -6,7 +6,7 @@ describe('waitBy', () => {
 		const Thing = function() {
 			this.do = waitBy(function(resolve, reject, first, last) {
 				assert.is(this, thing);
-				resolve(`${first} ${last}`);
+				resolve(`${ first } ${ last }`);
 			});
 		};
 
@@ -21,7 +21,7 @@ describe('waitBy', () => {
 		const Thing = function() {
 			this.do = waitBy(function(resolve, reject, first, last) {
 				assert.is(this, thing);
-				reject(`${first} ${last}`);
+				reject(`${ first } ${ last }`);
 			});
 		};
 

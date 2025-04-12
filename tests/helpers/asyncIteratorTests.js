@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 
 const defaultCallback = () => undefined;
 
@@ -73,7 +73,7 @@ export function asyncIteratorTests(test, settings) {
 				});
 		});
 
-		it(`should ${mutates ? '' : 'not '}mutate the original array`, () => {
+		it(`should ${ mutates ? '' : 'not ' }mutate the original array`, () => {
 			const input = array.slice();
 
 			return test(input, (...args) => callback(...args), settings)
@@ -124,7 +124,7 @@ export function asyncIteratorTests(test, settings) {
 				});
 		});
 
-		it(`should ${mutates ? '' : 'not '}mutate the original array`, () => {
+		it(`should ${ mutates ? '' : 'not ' }mutate the original array`, () => {
 			const input = array.slice();
 
 			return test(input, (...args) => new Promise((resolve) => {

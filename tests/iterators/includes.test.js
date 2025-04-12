@@ -1,3 +1,4 @@
+import { describe } from 'hippogriff';
 import { includes } from '../../index.js';
 import { asyncIndexTests } from '../helpers/asyncIteratorTests.js';
 

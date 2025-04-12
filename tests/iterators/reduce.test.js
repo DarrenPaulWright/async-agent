@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 import { reduce } from '../../index.js';
 
 const reduceTests = (test, settings) => {

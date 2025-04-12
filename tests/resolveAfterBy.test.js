@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 import { resolveAfterBy } from '../index.js';
 
 describe('resolveAfterBy', () => {
@@ -6,7 +6,7 @@ describe('resolveAfterBy', () => {
 		const Thing = function() {
 			this.do = resolveAfterBy(20, function(first, last) {
 				assert.is(this, thing);
-				return `${first} ${last}`;
+				return `${ first } ${ last }`;
 			});
 		};
 

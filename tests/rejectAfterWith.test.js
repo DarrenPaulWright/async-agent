@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 import { rejectAfterWith } from '../index.js';
 
 describe('rejectAfterWith', () => {

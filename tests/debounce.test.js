@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 import { debounce, wait } from '../index.js';
 
 /* eslint-disable unicorn/prevent-abbreviations */

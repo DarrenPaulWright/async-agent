@@ -1,4 +1,4 @@
-import { assert } from 'type-enforcer';
+import { describe, it, assert } from 'hippogriff';
 import { some } from '../../index.js';
 import { asyncIteratorTests } from '../helpers/asyncIteratorTests.js';
 

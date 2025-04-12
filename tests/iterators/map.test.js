@@ -1,3 +1,4 @@
+import { describe } from 'hippogriff';
 import { map } from '../../index.js';
 import { asyncIteratorTests } from '../helpers/asyncIteratorTests.js';
 

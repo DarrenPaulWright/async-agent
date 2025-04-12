@@ -1,3 +1,4 @@
+import { describe } from 'hippogriff';
 import { forRange } from '../../index.js';
 import asyncRepeaterTests from '../helpers/asyncRepeaterTests.js';
 
