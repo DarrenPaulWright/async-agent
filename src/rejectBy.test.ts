@@ -1,0 +1,24 @@
+import { assert, describe, it } from 'hippogriff';
+import { rejectBy } from '../index.js';
+
+describe('rejectBy', () => {
+	it('should set the context on resolve', () => {
+		class Thing {
+			do = rejectBy(function(first: string, last: string) {
+				// eslint-disable-next-line @typescript-eslint/no-use-before-define,@typescript-eslint/no-invalid-this
+				assert.is(this, thing);
+
+				return new Error(`${ first } ${ last }`);
+			});
+		}
+
+		const thing = new Thing();
+
+		return thing.do('John', 'Doe')
+			.then(() => {
+			})
+			.catch((error) => {
+				assert.equal(error.message, 'John Doe');
+			});
+	});
+});
